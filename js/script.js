@@ -60,7 +60,7 @@ $(document).ready(function() {
   var $progressBar = $('#b-slider-change .slide-progress .progress');
   var $progressBarLabel = $( '#b-slider-change .slide-steps' );
   var slideControls   = $(this).find('#b-slider-change');
-  $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
+  $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
     var calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
     var num = nextSlide + 1;
     numP = num.toString().padStart(2,0);
@@ -74,16 +74,16 @@ $(document).ready(function() {
     $progressBar
       .css('width', calc + '%')
       // .attr('aria-valuenow', calc );
-    
+
     // $progressBarLabel.text( calc + '% completed' );
 
   });
-  
+
   $slider.slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     speed: 400,
-    infinite: false, 
+    infinite: false,
     prevArrow: $('.change-prev'),
 	nextArrow: $('.change-next'),
 	appendDots: slideControls,
@@ -96,7 +96,7 @@ $(document).ready(function() {
                   totalSlides = slider.slideCount;
               return '<a class="dot" role="button" title="' + slideNumber + '"><span class="string">' + slideNumber + '</span></a>';
           }
-  });  
+  });
 });
 
 $(window).scroll(function(){
@@ -120,10 +120,14 @@ $(window).scroll(function(){
 	var api2 = el2.data('jsp');
 	}
 
-	if (win_w < 950){
-		var el3 = $('.bs-parts').jScrollPane({ showArrows: true, verticalArrowPositions: 'after', horizontalArrowPositions: 'after', arrowButtonSpeed: 170});
-		var api3 = el3.data('jsp');
-	}
+        if (win_w < 950){
+            var el3 = $('.bs-parts').jScrollPane({ showArrows: true, verticalArrowPositions: 'after', horizontalArrowPositions: 'after', arrowButtonSpeed: 170});
+            var api3 = el3.data('jsp');
+        }
+        if (win_w < 950){
+            var el4 = $('.ipos-right-scroll').jScrollPane({ showArrows: true, verticalArrowPositions: 'after', horizontalArrowPositions: 'after', arrowButtonSpeed: win_w - 20});
+            var api4 = el4.data('jsp');
+        }
 
 
 	}, 200);
@@ -132,22 +136,26 @@ $(window).scroll(function(){
 	$(window).resize(function(){
     win_w = $(document).width();
 	setTimeout(function() {
-    console.log(win_w);
-	if (win_w < 1020){
-		var el1 = $('.graf-scroll').jScrollPane({showArrows: true,verticalArrowPositions: 'after',horizontalArrowPositions: 'after',arrowButtonSpeed: win_w - 20});
-		var api1 = el1.data('jsp');
-	api1.reinitialise();
-	}
-	if (win_w < 950){
-		var el2 = $('.lvl9-scroll').jScrollPane({showArrows: true, verticalArrowPositions: 'after', horizontalArrowPositions: 'after', arrowButtonSpeed: 300 });
-	var api2 = el2.data('jsp');
-	api2.reinitialise();
-	}
-	if (win_w < 950){
-		var el3 = $('.bs-parts').jScrollPane({ showArrows: true, verticalArrowPositions: 'after', horizontalArrowPositions: 'after', arrowButtonSpeed: 170});
-		var api3 = el3.data('jsp');
-	api3.reinitialise();
-	}
+        console.log(win_w);
+        if (win_w < 1020){
+            var el1 = $('.graf-scroll').jScrollPane({showArrows: true,verticalArrowPositions: 'after',horizontalArrowPositions: 'after',arrowButtonSpeed: win_w - 20});
+            var api1 = el1.data('jsp');
+        api1.reinitialise();
+        }
+        if (win_w < 950){
+            var el2 = $('.lvl9-scroll').jScrollPane({showArrows: true, verticalArrowPositions: 'after', horizontalArrowPositions: 'after', arrowButtonSpeed: 300 });
+        var api2 = el2.data('jsp');
+        api2.reinitialise();
+        }
+        if (win_w < 950){
+            var el3 = $('.bs-parts').jScrollPane({ showArrows: true, verticalArrowPositions: 'after', horizontalArrowPositions: 'after', arrowButtonSpeed: 170});
+            var api3 = el3.data('jsp');
+        api3.reinitialise();
+        }
+        if (win_w < 950){
+            var el4 = $('.ipos-right-scroll').jScrollPane({ showArrows: true, verticalArrowPositions: 'after', horizontalArrowPositions: 'after', arrowButtonSpeed: win_w - 20});
+            var api4 = el4.data('jsp');
+        }
 	}, 200);
 
 	});
@@ -192,7 +200,7 @@ function initializeClock(id, endtime) {
   var timeinterval = setInterval(updateClock, 1000);
 }
 
-var deadline="December 30 2020 00:00:00 GMT+0300"; 
+var deadline="December 30 2020 00:00:00 GMT+0300";
 // var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000); // for endless timer
 initializeClock('countdown1', deadline);
 initializeClock('countdown2', deadline);
