@@ -55,49 +55,89 @@ $(function() {
 
 
 
-$(document).ready(function() {
-  var $slider = $('#b-slider-change .slides');
-  var $progressBar = $('#b-slider-change .slide-progress .progress');
-  var $progressBarLabel = $( '#b-slider-change .slide-steps' );
-  var slideControls   = $(this).find('#b-slider-change');
-  $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-    var calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
-    var num = nextSlide + 1;
-    numP = num.toString().padStart(2,0);
-    var numAll = nextSlide + 1;
-    console.log(nextSlide);
-    $('#b-slider-change').removeClass();
-    $('#b-slider-change').addClass('slid-'+num);
-    $('#b-slider-change .nav-active').text(num);
-    $('#b-slider-change .step').text(numP);
+// слайдер на главной
+    if($("#b-slider-change .slides").length>0) {
+        var $slider = $('#b-slider-change .slides');
+        var $progressBar = $('#b-slider-change .slide-progress .progress');
+        var $progressBarLabel = $('#b-slider-change .slide-steps');
+        var slideControls = $(this).find('#b-slider-change');
+        $slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+            var calc = ((nextSlide) / (slick.slideCount - 1)) * 100;
+            var num = nextSlide + 1;
+            numP = num.toString().padStart(2, 0);
+            var numAll = nextSlide + 1;
+            console.log(nextSlide);
+            $('#b-slider-change').removeClass();
+            $('#b-slider-change').addClass('slid-' + num);
+            $('#b-slider-change .nav-active').text(num);
+            $('#b-slider-change .step').text(numP);
 
-    $progressBar
-      .css('width', calc + '%')
-      // .attr('aria-valuenow', calc );
+            $progressBar
+                .css('width', calc + '%')
+            // .attr('aria-valuenow', calc );
 
-    // $progressBarLabel.text( calc + '% completed' );
+            // $progressBarLabel.text( calc + '% completed' );
 
-  });
+        });
 
-  $slider.slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    speed: 400,
-    infinite: false,
-    prevArrow: $('.change-prev'),
-	nextArrow: $('.change-next'),
-	appendDots: slideControls,
-          dots: true,
-          dotsClass: 'custom-dots', //slick generates this <ul.custom-dots> within the appendDots container
-          customPaging: function (slider, i) {
-              //FYI just have a look at the object to find aviable information
-              console.log(slider);
-              var slideNumber = (i + 1),
-                  totalSlides = slider.slideCount;
-              return '<a class="dot" role="button" title="' + slideNumber + '"><span class="string">' + slideNumber + '</span></a>';
-          }
-  });
-});
+        $slider.slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            speed: 400,
+            infinite: false,
+            prevArrow: $('.change-prev'),
+            nextArrow: $('.change-next'),
+            appendDots: slideControls,
+            dots: true,
+            dotsClass: 'custom-dots', //slick generates this <ul.custom-dots> within the appendDots container
+            customPaging: function (slider, i) {
+                //FYI just have a look at the object to find aviable information
+                console.log(slider);
+                var slideNumber = (i + 1),
+                    totalSlides = slider.slideCount;
+                return '<a class="dot" role="button" title="' + slideNumber + '"><span class="string">' + slideNumber + '</span></a>';
+            }
+        });
+    } // end if
+
+  // слайдер другой ipo
+    if($("#ipos-slider .slider").length>0) {
+        var $slider = $('#ipos-slider .slider');
+        var $progressBar = $('#ipos-slider .slide-progress .progress');
+        var $progressBarLabel = $('#ipos-slider .slide-steps');
+        var slideControls = $(this).find('#ipos-slider');
+        $slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+            var calc = ((nextSlide) / (slick.slideCount - 3)) * 100;
+            var num = nextSlide + 1;
+            numP = num.toString().padStart(2, 0);
+            var numAll = nextSlide + 1;
+            numA = (slick.slideCount - 2).toString().padStart(2, 0);
+            console.log(nextSlide);
+
+            $('#ipos-slider .step').text(numP);
+            $('#ipos-slider .steps').text(numA);
+            $progressBar
+                .css('width', calc + '%')
+            // .attr('aria-valuenow', calc );
+
+            // $progressBarLabel.text( calc + '% completed' );
+
+        });
+
+        $slider.slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            speed: 400,
+            infinite: false,
+            prevArrow: $('#ipo-slide-prev'),
+            nextArrow: $('#ipo-slide-next'),
+            // appendDots: slideControls,
+            dots: false,
+            // dotsClass: 'custom-dots', //slick generates this <ul.custom-dots> within the appendDots container
+
+        });
+    } // end if
+
 
 $(window).scroll(function(){
   var sticky = $('header'),
@@ -128,9 +168,12 @@ $(window).scroll(function(){
             var el4 = $('.ipos-right-scroll').jScrollPane({ showArrows: true, verticalArrowPositions: 'after', horizontalArrowPositions: 'after', arrowButtonSpeed: win_w - 20});
             var api4 = el4.data('jsp');
         }
+        if (win_w < 1250){
+            var el5 = $('.graf-scroll').jScrollPane({showArrows: true,verticalArrowPositions: 'after',horizontalArrowPositions: 'after',arrowButtonSpeed: win_w - 20});
+            var api5 = el1.data('jsp');
+        }
 
-
-	}, 200);
+    }, 200);
 
 
 	$(window).resize(function(){
