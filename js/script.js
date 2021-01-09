@@ -101,43 +101,44 @@ $(function() {
     } // end if
 
   // слайдер другой ipo
-    if($("#ipos-slider .slider").length>0) {
-        var $slider = $('#ipos-slider .slider');
-        var $progressBar = $('#ipos-slider .slide-progress .progress');
-        var $progressBarLabel = $('#ipos-slider .slide-steps');
-        var slideControls = $(this).find('#ipos-slider');
-        $slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-            var calc = ((nextSlide) / (slick.slideCount - 3)) * 100;
-            var num = nextSlide + 1;
-            numP = num.toString().padStart(2, 0);
-            var numAll = nextSlide + 1;
-            numA = (slick.slideCount - 2).toString().padStart(2, 0);
-            console.log(nextSlide);
+    if (win_w > 1020) {
+        if ($("#ipos-slider .slider").length > 0) {
+            var $slider = $('#ipos-slider .slider');
+            var $progressBar = $('#ipos-slider .slide-progress .progress');
+            var $progressBarLabel = $('#ipos-slider .slide-steps');
+            var slideControls = $(this).find('#ipos-slider');
+            $slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+                var calc = ((nextSlide) / (slick.slideCount - 3)) * 100;
+                var num = nextSlide + 1;
+                numP = num.toString().padStart(2, 0);
+                var numAll = nextSlide + 1;
+                numA = (slick.slideCount - 2).toString().padStart(2, 0);
+                console.log(nextSlide);
 
-            $('#ipos-slider .step').text(numP);
-            $('#ipos-slider .steps').text(numA);
-            $progressBar
-                .css('width', calc + '%')
-            // .attr('aria-valuenow', calc );
+                $('#ipos-slider .step').text(numP);
+                $('#ipos-slider .steps').text(numA);
+                $progressBar
+                    .css('width', calc + '%')
+                // .attr('aria-valuenow', calc );
 
-            // $progressBarLabel.text( calc + '% completed' );
+                // $progressBarLabel.text( calc + '% completed' );
 
-        });
+            });
 
-        $slider.slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            speed: 400,
-            infinite: false,
-            prevArrow: $('#ipo-slide-prev'),
-            nextArrow: $('#ipo-slide-next'),
-            // appendDots: slideControls,
-            dots: false,
-            // dotsClass: 'custom-dots', //slick generates this <ul.custom-dots> within the appendDots container
+            $slider.slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                speed: 400,
+                infinite: false,
+                prevArrow: $('#ipo-slide-prev'),
+                nextArrow: $('#ipo-slide-next'),
+                // appendDots: slideControls,
+                dots: false,
+                // dotsClass: 'custom-dots', //slick generates this <ul.custom-dots> within the appendDots container
 
-        });
-    } // end if
-
+            });
+        } // end if lenght
+    } // end if win_w
 
 $(window).scroll(function(){
   var sticky = $('header'),
@@ -168,9 +169,11 @@ $(window).scroll(function(){
             var el4 = $('.ipos-right-scroll').jScrollPane({ showArrows: true, verticalArrowPositions: 'after', horizontalArrowPositions: 'after', arrowButtonSpeed: win_w - 20});
             var api4 = el4.data('jsp');
         }
-        if (win_w < 1250){
-            var el5 = $('.graf-scroll').jScrollPane({showArrows: true,verticalArrowPositions: 'after',horizontalArrowPositions: 'after',arrowButtonSpeed: win_w - 20});
-            var api5 = el1.data('jsp');
+        if (win_w < 1020){
+            var el5 = $('.ipos-full-scroll').jScrollPane({showArrows: true,verticalArrowPositions: 'after',horizontalArrowPositions: 'after',arrowButtonSpeed: win_w - 30});
+            var api5 = el5.data('jsp');
+            var el6 = $('.ipos-full__slider--scroll').jScrollPane({showArrows: true,verticalArrowPositions: 'after',horizontalArrowPositions: 'after', arrowButtonSpeed: win_w - 30});
+            var api6 = el6.data('jsp');
         }
 
     }, 200);
@@ -199,6 +202,15 @@ $(window).scroll(function(){
             var el4 = $('.ipos-right-scroll').jScrollPane({ showArrows: true, verticalArrowPositions: 'after', horizontalArrowPositions: 'after', arrowButtonSpeed: win_w - 20});
             var api4 = el4.data('jsp');
         }
+        if (win_w < 1020){
+            var el5 = $('.ipos-full-scroll').jScrollPane({showArrows: true,verticalArrowPositions: 'after',horizontalArrowPositions: 'after',arrowButtonSpeed: win_w - 30});
+            var api5 = el5.data('jsp');
+            var el6 = $('.ipos-full__slider--scroll').jScrollPane({showArrows: true,verticalArrowPositions: 'after',horizontalArrowPositions: 'after', arrowButtonSpeed: win_w - 30});
+            var api6 = el6.data('jsp');
+
+        }
+
+
 	}, 200);
 
 	});
