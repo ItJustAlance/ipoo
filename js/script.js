@@ -37,6 +37,21 @@ $(function() {
 		$("body").addClass("pop-show");
 		return false;
 	});
+
+    $("#js-tab-type-block").on("click", function() {
+        $(this).addClass('active');
+        $("#js-tab-type-table").removeClass('active');
+        $('.tab-type-blocks').show(0);
+        $('.tab-type-table').hide(0);
+    });
+    $("#js-tab-type-table").on("click", function() {
+        $(this).addClass('active');
+        $("#js-tab-type-block").removeClass('active');
+        $('.tab-type-blocks').hide(0);
+        $('.tab-type-table').show(0);
+    });
+
+
   $(document).on('click', function(e) {
   if (!$(e.target).closest(".popup-wrapper").length) {
     $(".popup").fadeOut();
@@ -53,10 +68,9 @@ $(function() {
 
     $(".drop-select__value").on("click", function() {
         if($(this).parent(".drop-select").is(".active")){
-
         }else{
-        $(".drop-select").find('.drop-select__list').slideUp();
-        $(".drop-select").removeClass("active");
+            $(".drop-select").find('.drop-select__list').slideUp();
+            $(".drop-select").removeClass("active");
         }
         $(this).parent().find('.drop-select__list').slideToggle();
         $(this).parent().toggleClass("active");
@@ -170,28 +184,70 @@ $(window).scroll(function(){
 
 
 	setTimeout(function() {
-	if (win_w < 1020){
-		var el1 = $('.graf-scroll').jScrollPane({showArrows: true,verticalArrowPositions: 'after',horizontalArrowPositions: 'after',arrowButtonSpeed: win_w - 20});
-		var api1 = el1.data('jsp');
-	}
-	if (win_w < 950){
-		var el2 = $('.lvl9-scroll').jScrollPane({showArrows: true, verticalArrowPositions: 'after', horizontalArrowPositions: 'after', arrowButtonSpeed: 300 });
-	var api2 = el2.data('jsp');
-	}
+        if (win_w < 1020){
+            if ($(".graf-scroll").length > 0) {
+                var el1 = $('.graf-scroll').jScrollPane({
+                    showArrows: true,
+                    verticalArrowPositions: 'after',
+                    horizontalArrowPositions: 'after',
+                    arrowButtonSpeed: win_w - 20
+                });
+                var api1 = el1.data('jsp');
+            }
+        }
+        if (win_w < 950){
+            if ($(".lvl9-scroll").length > 0) {
+                var el2 = $('.lvl9-scroll').jScrollPane({
+                    showArrows: true,
+                    verticalArrowPositions: 'after',
+                    horizontalArrowPositions: 'after',
+                    arrowButtonSpeed: 300
+                });
+                var api2 = el2.data('jsp');
+            }
+        }
 
         if (win_w < 950){
-            var el3 = $('.bs-parts').jScrollPane({ showArrows: true, verticalArrowPositions: 'after', horizontalArrowPositions: 'after', arrowButtonSpeed: 170});
-            var api3 = el3.data('jsp');
+            if ($(".bs-parts").length > 0) {
+                var el3 = $('.bs-parts').jScrollPane({
+                    showArrows: true,
+                    verticalArrowPositions: 'after',
+                    horizontalArrowPositions: 'after',
+                    arrowButtonSpeed: 170
+                });
+                var api3 = el3.data('jsp');
+            }
         }
         if (win_w < 950){
-            var el4 = $('.ipos-right-scroll').jScrollPane({ showArrows: true, verticalArrowPositions: 'after', horizontalArrowPositions: 'after', arrowButtonSpeed: win_w - 20});
-            var api4 = el4.data('jsp');
+            if ($(".ipos-right-scroll").length > 0) {
+                var el4 = $('.ipos-right-scroll').jScrollPane({
+                    showArrows: true,
+                    verticalArrowPositions: 'after',
+                    horizontalArrowPositions: 'after',
+                    arrowButtonSpeed: win_w - 20
+                });
+                var api4 = el4.data('jsp');
+            }
         }
         if (win_w < 1020){
-            var el5 = $('.ipos-full-scroll').jScrollPane({showArrows: true,verticalArrowPositions: 'after',horizontalArrowPositions: 'after',arrowButtonSpeed: win_w - 30});
-            var api5 = el5.data('jsp');
-            var el6 = $('.ipos-full__slider--scroll').jScrollPane({showArrows: true,verticalArrowPositions: 'after',horizontalArrowPositions: 'after', arrowButtonSpeed: win_w - 30});
-            var api6 = el6.data('jsp');
+            if ($(".ipos-full-scroll").length > 0) {
+                var el5 = $('.ipos-full-scroll').jScrollPane({
+                    showArrows: true,
+                    verticalArrowPositions: 'after',
+                    horizontalArrowPositions: 'after',
+                    arrowButtonSpeed: win_w - 30
+                });
+                var api5 = el5.data('jsp');
+            }
+                if ($(".ipos-full__slider--scroll").length > 0) {
+                    var el6 = $('.ipos-full__slider--scroll').jScrollPane({
+                        showArrows: true,
+                        verticalArrowPositions: 'after',
+                        horizontalArrowPositions: 'after',
+                        arrowButtonSpeed: win_w - 30
+                    });
+                    var api6 = el6.data('jsp');
+                }
         }
 
     }, 200);
@@ -202,33 +258,78 @@ $(window).scroll(function(){
 	setTimeout(function() {
         console.log(win_w);
         if (win_w < 1020){
-            var el1 = $('.graf-scroll').jScrollPane({showArrows: true,verticalArrowPositions: 'after',horizontalArrowPositions: 'after',arrowButtonSpeed: win_w - 20});
-            var api1 = el1.data('jsp');
-        api1.reinitialise();
+            if ($(".graf-scroll").length > 0) {
+                var el1 = $('.graf-scroll').jScrollPane({
+                    showArrows: true,
+                    verticalArrowPositions: 'after',
+                    horizontalArrowPositions: 'after',
+                    arrowButtonSpeed: win_w - 20
+                });
+                var api1 = el1.data('jsp');
+            }
         }
         if (win_w < 950){
-            var el2 = $('.lvl9-scroll').jScrollPane({showArrows: true, verticalArrowPositions: 'after', horizontalArrowPositions: 'after', arrowButtonSpeed: 300 });
-        var api2 = el2.data('jsp');
-        api2.reinitialise();
+            if ($(".lvl9-scroll").length > 0) {
+                var el2 = $('.lvl9-scroll').jScrollPane({
+                    showArrows: true,
+                    verticalArrowPositions: 'after',
+                    horizontalArrowPositions: 'after',
+                    arrowButtonSpeed: 300
+                });
+                var api2 = el2.data('jsp');
+            }
+        }
+
+        if (win_w < 950){
+            if ($(".bs-parts").length > 0) {
+                var el3 = $('.bs-parts').jScrollPane({
+                    showArrows: true,
+                    verticalArrowPositions: 'after',
+                    horizontalArrowPositions: 'after',
+                    arrowButtonSpeed: 170
+                });
+                var api3 = el3.data('jsp');
+            }
         }
         if (win_w < 950){
-            var el3 = $('.bs-parts').jScrollPane({ showArrows: true, verticalArrowPositions: 'after', horizontalArrowPositions: 'after', arrowButtonSpeed: 170});
-            var api3 = el3.data('jsp');
-        api3.reinitialise();
-        }
-        if (win_w < 950){
-            var el4 = $('.ipos-right-scroll').jScrollPane({ showArrows: true, verticalArrowPositions: 'after', horizontalArrowPositions: 'after', arrowButtonSpeed: win_w - 20});
-            var api4 = el4.data('jsp');
+            if ($(".ipos-right-scroll").length > 0) {
+                var el4 = $('.ipos-right-scroll').jScrollPane({
+                    showArrows: true,
+                    verticalArrowPositions: 'after',
+                    horizontalArrowPositions: 'after',
+                    arrowButtonSpeed: win_w - 20
+                });
+                var api4 = el4.data('jsp');
+            }
         }
         if (win_w < 1020){
-            var el5 = $('.ipos-full-scroll').jScrollPane({showArrows: true,verticalArrowPositions: 'after',horizontalArrowPositions: 'after',arrowButtonSpeed: win_w - 30});
-            var api5 = el5.data('jsp');
-            var el6 = $('.ipos-full__slider--scroll').jScrollPane({showArrows: true,verticalArrowPositions: 'after',horizontalArrowPositions: 'after', arrowButtonSpeed: win_w - 30});
-            var api6 = el6.data('jsp');
-
+            if ($(".ipos-full-scroll").length > 0) {
+                var el5 = $('.ipos-full-scroll').jScrollPane({
+                    showArrows: true,
+                    verticalArrowPositions: 'after',
+                    horizontalArrowPositions: 'after',
+                    arrowButtonSpeed: win_w - 30
+                });
+                var api5 = el5.data('jsp');
+            }
+            if ($(".ipos-full__slider--scroll").length > 0) {
+                var el6 = $('.ipos-full__slider--scroll').jScrollPane({
+                    showArrows: true,
+                    verticalArrowPositions: 'after',
+                    horizontalArrowPositions: 'after',
+                    arrowButtonSpeed: win_w - 30
+                });
+                var api6 = el6.data('jsp');
+            }
         }
 
+        if (win_w < 950) {
+            $("#js-tab-type-block").addClass('active');
+            $("#js-tab-type-table").removeClass('active');
+            $('.tab-type-blocks').show(0);
+            $('.tab-type-table').hide(0);
 
+        }
 	}, 200);
 
 	});

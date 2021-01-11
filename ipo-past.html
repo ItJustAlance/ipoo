@@ -145,7 +145,7 @@
             </div><!--end drop-select -->
           </div><!--end ipos-filter__btns -->
           <div class="ipos-filter__type">
-            <a href="#" class="type active">
+            <a href="#" id="js-tab-type-block" class="type active">
               <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <rect width="10.9091" height="10.9091" />
                 <rect x="13.0908" width="10.9091" height="10.9091" />
@@ -153,7 +153,7 @@
                 <rect x="13.0908" y="13.0908" width="10.9091" height="10.9091" />
               </svg>
             </a>
-            <a href="#" class="type">
+            <a href="#" id="js-tab-type-table" class="type">
               <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0.000488281" width="24" height="4.36364" />
                 <rect y="13.0908" width="24" height="4.36364" />
@@ -163,283 +163,478 @@
             </a>
           </div>
         </div><!--end ipos-filter -->
-        <div class="deal-full">
-          <div class="deal-full-scroll">
-            <div class="deal-full-scroll__content">
-              <div class="deal-item">
-                <div class="block">
-                  <div class="img"><img src="img/dohod-i.png" alt=""></div>
-                  <div class="tit-text">Provides edutainment products for children in China</div>
-                  <div class="bs-rows">
-                    <div class="b-row">
-                      <div class="col1">Цена первичного размещения</div>
-                      <div class="col2">35.00 $</div>
+        <div class="tab-type-blocks">
+          <div class="deal-full">
+            <div class="deal-full-scroll">
+              <div class="deal-full-scroll__content">
+                <div class="deal-item">
+                  <div class="block">
+                    <div class="img"><img src="img/dohod-i.png" alt=""></div>
+                    <div class="tit-text">Provides edutainment products for children in China</div>
+                    <div class="bs-rows">
+                      <div class="b-row">
+                        <div class="col1">Цена первичного размещения</div>
+                        <div class="col2">35.00 $</div>
+                      </div>
+                      <div class="b-row">
+                        <div class="col1">Цена на дату окончания
+                          Lock Up периода</div>
+                        <div class="col2">28 $</div>
+                      </div>
+                      <div class="b-row">
+                        <div class="col1">Заработок за первый
+                          день публичных торгов</div>
+                        <div class="col2">35.00 %</div>
+                      </div>
+                      <div class="b-row sel">
+                        <div class="col1">Прибыль на дату окончания Lock Up периода</div>
+                        <div class="col2">35.00 %</div>
+                      </div>
+                      <div class="b-row">
+                        <div class="col1">Рейтинг от IPO.one:</div>
+                        <div class="col2"><div class="stars"><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""></div></div>
+                      </div>
                     </div>
-                    <div class="b-row">
-                      <div class="col1">Цена на дату окончания
-                        Lock Up периода</div>
-                      <div class="col2">28 $</div>
+                  </div><!--end block -->
+                </div><!--end deal-item -->
+                <div class="deal-item">
+                  <div class="block">
+                    <div class="img"><img src="img/dohod-i.png" alt=""></div>
+                    <div class="tit-text">Provides edutainment products for children in China</div>
+                    <div class="bs-rows">
+                      <div class="b-row">
+                        <div class="col1">Цена первичного размещения</div>
+                        <div class="col2">35.00 $</div>
+                      </div>
+                      <div class="b-row">
+                        <div class="col1">Цена на дату окончания
+                          Lock Up периода</div>
+                        <div class="col2">28 $</div>
+                      </div>
+                      <div class="b-row">
+                        <div class="col1">Заработок за первый
+                          день публичных торгов</div>
+                        <div class="col2">35.00 %</div>
+                      </div>
+                      <div class="b-row sel">
+                        <div class="col1">Прибыль на дату окончания Lock Up периода</div>
+                        <div class="col2">35.00 %</div>
+                      </div>
+                      <div class="b-row">
+                        <div class="col1">Рейтинг от IPO.one:</div>
+                        <div class="col2"><div class="stars"><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""></div></div>
+                      </div>
                     </div>
-                    <div class="b-row">
-                      <div class="col1">Заработок за первый
-                        день публичных торгов</div>
-                      <div class="col2">35.00 %</div>
+                  </div><!--end block -->
+                </div><!--end deal-item -->
+                <div class="deal-item">
+                  <div class="block">
+                    <div class="img"><img src="img/dohod-i.png" alt=""></div>
+                    <div class="tit-text">Provides edutainment products for children in China</div>
+                    <div class="bs-rows">
+                      <div class="b-row">
+                        <div class="col1">Цена первичного размещения</div>
+                        <div class="col2">35.00 $</div>
+                      </div>
+                      <div class="b-row">
+                        <div class="col1">Цена на дату окончания
+                          Lock Up периода</div>
+                        <div class="col2">28 $</div>
+                      </div>
+                      <div class="b-row">
+                        <div class="col1">Заработок за первый
+                          день публичных торгов</div>
+                        <div class="col2">35.00 %</div>
+                      </div>
+                      <div class="b-row sel">
+                        <div class="col1">Прибыль на дату окончания Lock Up периода</div>
+                        <div class="col2">35.00 %</div>
+                      </div>
+                      <div class="b-row">
+                        <div class="col1">Рейтинг от IPO.one:</div>
+                        <div class="col2"><div class="stars"><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""></div></div>
+                      </div>
                     </div>
-                    <div class="b-row sel">
-                      <div class="col1">Прибыль на дату окончания Lock Up периода</div>
-                      <div class="col2">35.00 %</div>
+                  </div><!--end block -->
+                </div><!--end deal-item -->
+                <div class="deal-item">
+                  <div class="block">
+                    <div class="img"><img src="img/dohod-i.png" alt=""></div>
+                    <div class="tit-text">Provides edutainment products for children in China</div>
+                    <div class="bs-rows">
+                      <div class="b-row">
+                        <div class="col1">Цена первичного размещения</div>
+                        <div class="col2">35.00 $</div>
+                      </div>
+                      <div class="b-row">
+                        <div class="col1">Цена на дату окончания
+                          Lock Up периода</div>
+                        <div class="col2">28 $</div>
+                      </div>
+                      <div class="b-row">
+                        <div class="col1">Заработок за первый
+                          день публичных торгов</div>
+                        <div class="col2">35.00 %</div>
+                      </div>
+                      <div class="b-row sel">
+                        <div class="col1">Прибыль на дату окончания Lock Up периода</div>
+                        <div class="col2">35.00 %</div>
+                      </div>
+                      <div class="b-row">
+                        <div class="col1">Рейтинг от IPO.one:</div>
+                        <div class="col2"><div class="stars"><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""></div></div>
+                      </div>
                     </div>
-                    <div class="b-row">
-                      <div class="col1">Рейтинг от IPO.one:</div>
-                      <div class="col2"><div class="stars"><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""></div></div>
+                  </div><!--end block -->
+                </div><!--end deal-item -->
+                <div class="deal-item">
+                  <div class="block">
+                    <div class="img"><img src="img/dohod-i.png" alt=""></div>
+                    <div class="tit-text">Provides edutainment products for children in China</div>
+                    <div class="bs-rows">
+                      <div class="b-row">
+                        <div class="col1">Цена первичного размещения</div>
+                        <div class="col2">35.00 $</div>
+                      </div>
+                      <div class="b-row">
+                        <div class="col1">Цена на дату окончания
+                          Lock Up периода</div>
+                        <div class="col2">28 $</div>
+                      </div>
+                      <div class="b-row">
+                        <div class="col1">Заработок за первый
+                          день публичных торгов</div>
+                        <div class="col2">35.00 %</div>
+                      </div>
+                      <div class="b-row sel">
+                        <div class="col1">Прибыль на дату окончания Lock Up периода</div>
+                        <div class="col2">35.00 %</div>
+                      </div>
+                      <div class="b-row">
+                        <div class="col1">Рейтинг от IPO.one:</div>
+                        <div class="col2"><div class="stars"><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""></div></div>
+                      </div>
                     </div>
-                  </div>
-                </div><!--end block -->
-              </div><!--end deal-item -->
-              <div class="deal-item">
-                <div class="block">
-                  <div class="img"><img src="img/dohod-i.png" alt=""></div>
-                  <div class="tit-text">Provides edutainment products for children in China</div>
-                  <div class="bs-rows">
-                    <div class="b-row">
-                      <div class="col1">Цена первичного размещения</div>
-                      <div class="col2">35.00 $</div>
+                  </div><!--end block -->
+                </div><!--end deal-item -->
+                <div class="deal-item">
+                  <div class="block">
+                    <div class="img"><img src="img/dohod-i.png" alt=""></div>
+                    <div class="tit-text">Provides edutainment products for children in China</div>
+                    <div class="bs-rows">
+                      <div class="b-row">
+                        <div class="col1">Цена первичного размещения</div>
+                        <div class="col2">35.00 $</div>
+                      </div>
+                      <div class="b-row">
+                        <div class="col1">Цена на дату окончания
+                          Lock Up периода</div>
+                        <div class="col2">28 $</div>
+                      </div>
+                      <div class="b-row">
+                        <div class="col1">Заработок за первый
+                          день публичных торгов</div>
+                        <div class="col2">35.00 %</div>
+                      </div>
+                      <div class="b-row sel">
+                        <div class="col1">Прибыль на дату окончания Lock Up периода</div>
+                        <div class="col2">35.00 %</div>
+                      </div>
+                      <div class="b-row">
+                        <div class="col1">Рейтинг от IPO.one:</div>
+                        <div class="col2"><div class="stars"><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""></div></div>
+                      </div>
                     </div>
-                    <div class="b-row">
-                      <div class="col1">Цена на дату окончания
-                        Lock Up периода</div>
-                      <div class="col2">28 $</div>
+                  </div><!--end block -->
+                </div><!--end deal-item -->
+                <div class="deal-item">
+                  <div class="block">
+                    <div class="img"><img src="img/dohod-i.png" alt=""></div>
+                    <div class="tit-text">Provides edutainment products for children in China</div>
+                    <div class="bs-rows">
+                      <div class="b-row">
+                        <div class="col1">Цена первичного размещения</div>
+                        <div class="col2">35.00 $</div>
+                      </div>
+                      <div class="b-row">
+                        <div class="col1">Цена на дату окончания
+                          Lock Up периода</div>
+                        <div class="col2">28 $</div>
+                      </div>
+                      <div class="b-row">
+                        <div class="col1">Заработок за первый
+                          день публичных торгов</div>
+                        <div class="col2">35.00 %</div>
+                      </div>
+                      <div class="b-row sel">
+                        <div class="col1">Прибыль на дату окончания Lock Up периода</div>
+                        <div class="col2">35.00 %</div>
+                      </div>
+                      <div class="b-row">
+                        <div class="col1">Рейтинг от IPO.one:</div>
+                        <div class="col2"><div class="stars"><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""></div></div>
+                      </div>
                     </div>
-                    <div class="b-row">
-                      <div class="col1">Заработок за первый
-                        день публичных торгов</div>
-                      <div class="col2">35.00 %</div>
+                  </div><!--end block -->
+                </div><!--end deal-item -->
+                <div class="deal-item">
+                  <div class="block">
+                    <div class="img"><img src="img/dohod-i.png" alt=""></div>
+                    <div class="tit-text">Provides edutainment products for children in China</div>
+                    <div class="bs-rows">
+                      <div class="b-row">
+                        <div class="col1">Цена первичного размещения</div>
+                        <div class="col2">35.00 $</div>
+                      </div>
+                      <div class="b-row">
+                        <div class="col1">Цена на дату окончания
+                          Lock Up периода</div>
+                        <div class="col2">28 $</div>
+                      </div>
+                      <div class="b-row">
+                        <div class="col1">Заработок за первый
+                          день публичных торгов</div>
+                        <div class="col2">35.00 %</div>
+                      </div>
+                      <div class="b-row sel">
+                        <div class="col1">Прибыль на дату окончания Lock Up периода</div>
+                        <div class="col2">35.00 %</div>
+                      </div>
+                      <div class="b-row">
+                        <div class="col1">Рейтинг от IPO.one:</div>
+                        <div class="col2"><div class="stars"><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""></div></div>
+                      </div>
                     </div>
-                    <div class="b-row sel">
-                      <div class="col1">Прибыль на дату окончания Lock Up периода</div>
-                      <div class="col2">35.00 %</div>
+                  </div><!--end block -->
+                </div><!--end deal-item -->
+                <div class="deal-item">
+                  <div class="block">
+                    <div class="img"><img src="img/dohod-i.png" alt=""></div>
+                    <div class="tit-text">Provides edutainment products for children in China</div>
+                    <div class="bs-rows">
+                      <div class="b-row">
+                        <div class="col1">Цена первичного размещения</div>
+                        <div class="col2">35.00 $</div>
+                      </div>
+                      <div class="b-row">
+                        <div class="col1">Цена на дату окончания
+                          Lock Up периода</div>
+                        <div class="col2">28 $</div>
+                      </div>
+                      <div class="b-row">
+                        <div class="col1">Заработок за первый
+                          день публичных торгов</div>
+                        <div class="col2">35.00 %</div>
+                      </div>
+                      <div class="b-row sel">
+                        <div class="col1">Прибыль на дату окончания Lock Up периода</div>
+                        <div class="col2">35.00 %</div>
+                      </div>
+                      <div class="b-row">
+                        <div class="col1">Рейтинг от IPO.one:</div>
+                        <div class="col2"><div class="stars"><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""></div></div>
+                      </div>
                     </div>
-                    <div class="b-row">
-                      <div class="col1">Рейтинг от IPO.one:</div>
-                      <div class="col2"><div class="stars"><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""></div></div>
-                    </div>
-                  </div>
-                </div><!--end block -->
-              </div><!--end deal-item -->
-              <div class="deal-item">
-                <div class="block">
-                  <div class="img"><img src="img/dohod-i.png" alt=""></div>
-                  <div class="tit-text">Provides edutainment products for children in China</div>
-                  <div class="bs-rows">
-                    <div class="b-row">
-                      <div class="col1">Цена первичного размещения</div>
-                      <div class="col2">35.00 $</div>
-                    </div>
-                    <div class="b-row">
-                      <div class="col1">Цена на дату окончания
-                        Lock Up периода</div>
-                      <div class="col2">28 $</div>
-                    </div>
-                    <div class="b-row">
-                      <div class="col1">Заработок за первый
-                        день публичных торгов</div>
-                      <div class="col2">35.00 %</div>
-                    </div>
-                    <div class="b-row sel">
-                      <div class="col1">Прибыль на дату окончания Lock Up периода</div>
-                      <div class="col2">35.00 %</div>
-                    </div>
-                    <div class="b-row">
-                      <div class="col1">Рейтинг от IPO.one:</div>
-                      <div class="col2"><div class="stars"><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""></div></div>
-                    </div>
-                  </div>
-                </div><!--end block -->
-              </div><!--end deal-item -->
-              <div class="deal-item">
-                <div class="block">
-                  <div class="img"><img src="img/dohod-i.png" alt=""></div>
-                  <div class="tit-text">Provides edutainment products for children in China</div>
-                  <div class="bs-rows">
-                    <div class="b-row">
-                      <div class="col1">Цена первичного размещения</div>
-                      <div class="col2">35.00 $</div>
-                    </div>
-                    <div class="b-row">
-                      <div class="col1">Цена на дату окончания
-                        Lock Up периода</div>
-                      <div class="col2">28 $</div>
-                    </div>
-                    <div class="b-row">
-                      <div class="col1">Заработок за первый
-                        день публичных торгов</div>
-                      <div class="col2">35.00 %</div>
-                    </div>
-                    <div class="b-row sel">
-                      <div class="col1">Прибыль на дату окончания Lock Up периода</div>
-                      <div class="col2">35.00 %</div>
-                    </div>
-                    <div class="b-row">
-                      <div class="col1">Рейтинг от IPO.one:</div>
-                      <div class="col2"><div class="stars"><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""></div></div>
-                    </div>
-                  </div>
-                </div><!--end block -->
-              </div><!--end deal-item -->
-              <div class="deal-item">
-                <div class="block">
-                  <div class="img"><img src="img/dohod-i.png" alt=""></div>
-                  <div class="tit-text">Provides edutainment products for children in China</div>
-                  <div class="bs-rows">
-                    <div class="b-row">
-                      <div class="col1">Цена первичного размещения</div>
-                      <div class="col2">35.00 $</div>
-                    </div>
-                    <div class="b-row">
-                      <div class="col1">Цена на дату окончания
-                        Lock Up периода</div>
-                      <div class="col2">28 $</div>
-                    </div>
-                    <div class="b-row">
-                      <div class="col1">Заработок за первый
-                        день публичных торгов</div>
-                      <div class="col2">35.00 %</div>
-                    </div>
-                    <div class="b-row sel">
-                      <div class="col1">Прибыль на дату окончания Lock Up периода</div>
-                      <div class="col2">35.00 %</div>
-                    </div>
-                    <div class="b-row">
-                      <div class="col1">Рейтинг от IPO.one:</div>
-                      <div class="col2"><div class="stars"><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""></div></div>
-                    </div>
-                  </div>
-                </div><!--end block -->
-              </div><!--end deal-item -->
-              <div class="deal-item">
-                <div class="block">
-                  <div class="img"><img src="img/dohod-i.png" alt=""></div>
-                  <div class="tit-text">Provides edutainment products for children in China</div>
-                  <div class="bs-rows">
-                    <div class="b-row">
-                      <div class="col1">Цена первичного размещения</div>
-                      <div class="col2">35.00 $</div>
-                    </div>
-                    <div class="b-row">
-                      <div class="col1">Цена на дату окончания
-                        Lock Up периода</div>
-                      <div class="col2">28 $</div>
-                    </div>
-                    <div class="b-row">
-                      <div class="col1">Заработок за первый
-                        день публичных торгов</div>
-                      <div class="col2">35.00 %</div>
-                    </div>
-                    <div class="b-row sel">
-                      <div class="col1">Прибыль на дату окончания Lock Up периода</div>
-                      <div class="col2">35.00 %</div>
-                    </div>
-                    <div class="b-row">
-                      <div class="col1">Рейтинг от IPO.one:</div>
-                      <div class="col2"><div class="stars"><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""></div></div>
-                    </div>
-                  </div>
-                </div><!--end block -->
-              </div><!--end deal-item -->
-              <div class="deal-item">
-                <div class="block">
-                  <div class="img"><img src="img/dohod-i.png" alt=""></div>
-                  <div class="tit-text">Provides edutainment products for children in China</div>
-                  <div class="bs-rows">
-                    <div class="b-row">
-                      <div class="col1">Цена первичного размещения</div>
-                      <div class="col2">35.00 $</div>
-                    </div>
-                    <div class="b-row">
-                      <div class="col1">Цена на дату окончания
-                        Lock Up периода</div>
-                      <div class="col2">28 $</div>
-                    </div>
-                    <div class="b-row">
-                      <div class="col1">Заработок за первый
-                        день публичных торгов</div>
-                      <div class="col2">35.00 %</div>
-                    </div>
-                    <div class="b-row sel">
-                      <div class="col1">Прибыль на дату окончания Lock Up периода</div>
-                      <div class="col2">35.00 %</div>
-                    </div>
-                    <div class="b-row">
-                      <div class="col1">Рейтинг от IPO.one:</div>
-                      <div class="col2"><div class="stars"><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""></div></div>
-                    </div>
-                  </div>
-                </div><!--end block -->
-              </div><!--end deal-item -->
-              <div class="deal-item">
-                <div class="block">
-                  <div class="img"><img src="img/dohod-i.png" alt=""></div>
-                  <div class="tit-text">Provides edutainment products for children in China</div>
-                  <div class="bs-rows">
-                    <div class="b-row">
-                      <div class="col1">Цена первичного размещения</div>
-                      <div class="col2">35.00 $</div>
-                    </div>
-                    <div class="b-row">
-                      <div class="col1">Цена на дату окончания
-                        Lock Up периода</div>
-                      <div class="col2">28 $</div>
-                    </div>
-                    <div class="b-row">
-                      <div class="col1">Заработок за первый
-                        день публичных торгов</div>
-                      <div class="col2">35.00 %</div>
-                    </div>
-                    <div class="b-row sel">
-                      <div class="col1">Прибыль на дату окончания Lock Up периода</div>
-                      <div class="col2">35.00 %</div>
-                    </div>
-                    <div class="b-row">
-                      <div class="col1">Рейтинг от IPO.one:</div>
-                      <div class="col2"><div class="stars"><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""></div></div>
-                    </div>
-                  </div>
-                </div><!--end block -->
-              </div><!--end deal-item -->
-              <div class="deal-item">
-                <div class="block">
-                  <div class="img"><img src="img/dohod-i.png" alt=""></div>
-                  <div class="tit-text">Provides edutainment products for children in China</div>
-                  <div class="bs-rows">
-                    <div class="b-row">
-                      <div class="col1">Цена первичного размещения</div>
-                      <div class="col2">35.00 $</div>
-                    </div>
-                    <div class="b-row">
-                      <div class="col1">Цена на дату окончания
-                        Lock Up периода</div>
-                      <div class="col2">28 $</div>
-                    </div>
-                    <div class="b-row">
-                      <div class="col1">Заработок за первый
-                        день публичных торгов</div>
-                      <div class="col2">35.00 %</div>
-                    </div>
-                    <div class="b-row sel">
-                      <div class="col1">Прибыль на дату окончания Lock Up периода</div>
-                      <div class="col2">35.00 %</div>
-                    </div>
-                    <div class="b-row">
-                      <div class="col1">Рейтинг от IPO.one:</div>
-                      <div class="col2"><div class="stars"><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""><img src="img/star1.png" alt=""></div></div>
-                    </div>
-                  </div>
-                </div><!--end block -->
-              </div><!--end deal-item -->
-            </div><!--end deal-right-scroll__content -->
-          </div><!--end deal-right-scroll -->
-          <div class="b-btn-center"><a href="#" class="btn">Загрузить все</a></div>
-        </div><!--end deal-full -->
+                  </div><!--end block -->
+                </div><!--end deal-item -->
+              </div><!--end deal-right-scroll__content -->
+            </div><!--end deal-right-scroll -->
+            <div class="b-btn-center"><a href="#" class="btn">Загрузить все</a></div>
+          </div><!--end deal-full -->
+        </div><!--end tab-type-blocks -->
+        <div class="tab-type-table">
+          <div class="deal-table">
+            <div class="deal-table__row">
+              <div class="deal-table__th"></div>
+              <div class="deal-table__th">Компания</div>
+              <div class="deal-table__th">Тикер</div>
+              <div class="deal-table__th">Сфера</div>
+              <div class="deal-table__th">Первый
+                торговый день</div>
+              <div class="deal-table__th">Цена IPO</div>
+              <div class="deal-table__th">Доходность за 1-й
+                день торгов</div>
+              <div class="deal-table__th">Текущая
+                доходность</div>
+              <div class="deal-table__th">Дата окончания
+                Lock UP периода</div>
+              <div class="deal-table__th">Доходность по итогам
+                Lock UP периода</div>
+              <div class="deal-table__th"></div>
+            </div><!--end deal-table__row -->
+            <div class="deal-table__row">
+              <div class="deal-table__td td-stars">
+                <img src="img/star1.png" alt="">
+                <img src="img/star1.png" alt="">
+                <img src="img/star1.png" alt="">
+              </div>
+              <div class="deal-table__td td-company">OZON Holding</div>
+              <div class="deal-table__td td-tick"><a href="#">OZON</a></div>
+              <div class="deal-table__td">Consumer Discretionary</div>
+              <div class="deal-table__td">08.10.2020</div>
+              <div class="deal-table__td">$30,00</div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td">25.02.2021</div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td"><a href="#" class="btn">Подробнее</a></div>
+            </div><!--end deal-table__row -->
+            <div class="deal-table__row">
+              <div class="deal-table__td td-stars">
+                <img src="img/star1.png" alt="">
+                <img src="img/star1.png" alt="">
+                <img src="img/star1.png" alt="">
+              </div>
+              <div class="deal-table__td td-company">OZON Holding</div>
+              <div class="deal-table__td td-tick"><a href="#">OZON</a></div>
+              <div class="deal-table__td">Consumer Discretionary</div>
+              <div class="deal-table__td">08.10.2020</div>
+              <div class="deal-table__td">$30,00</div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td">25.02.2021</div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td"><a href="#" class="btn">Подробнее</a></div>
+            </div><!--end deal-table__row -->
+            <div class="deal-table__row">
+              <div class="deal-table__td td-stars">
+                <img src="img/star1.png" alt="">
+                <img src="img/star1.png" alt="">
+                <img src="img/star1.png" alt="">
+              </div>
+              <div class="deal-table__td td-company">OZON Holding</div>
+              <div class="deal-table__td td-tick"><a href="#">OZON</a></div>
+              <div class="deal-table__td">Consumer Discretionary</div>
+              <div class="deal-table__td">08.10.2020</div>
+              <div class="deal-table__td">$30,00</div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td">25.02.2021</div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td"><a href="#" class="btn">Подробнее</a></div>
+            </div><!--end deal-table__row -->
+            <div class="deal-table__row">
+              <div class="deal-table__td td-stars">
+                <img src="img/star1.png" alt="">
+                <img src="img/star1.png" alt="">
+                <img src="img/star1.png" alt="">
+              </div>
+              <div class="deal-table__td td-company">OZON Holding</div>
+              <div class="deal-table__td td-tick"><a href="#">OZON</a></div>
+              <div class="deal-table__td">Consumer Discretionary</div>
+              <div class="deal-table__td">08.10.2020</div>
+              <div class="deal-table__td">$30,00</div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td">25.02.2021</div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td"><a href="#" class="btn">Подробнее</a></div>
+            </div><!--end deal-table__row -->
+            <div class="deal-table__row">
+              <div class="deal-table__td td-stars">
+                <img src="img/star1.png" alt="">
+                <img src="img/star1.png" alt="">
+                <img src="img/star1.png" alt="">
+              </div>
+              <div class="deal-table__td td-company">OZON Holding</div>
+              <div class="deal-table__td td-tick"><a href="#">OZON</a></div>
+              <div class="deal-table__td">Consumer Discretionary</div>
+              <div class="deal-table__td">08.10.2020</div>
+              <div class="deal-table__td">$30,00</div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td">25.02.2021</div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td"><a href="#" class="btn">Подробнее</a></div>
+            </div><!--end deal-table__row -->
+            <div class="deal-table__row">
+              <div class="deal-table__td td-stars">
+                <img src="img/star1.png" alt="">
+                <img src="img/star1.png" alt="">
+                <img src="img/star1.png" alt="">
+              </div>
+              <div class="deal-table__td td-company">OZON Holding</div>
+              <div class="deal-table__td td-tick"><a href="#">OZON</a></div>
+              <div class="deal-table__td">Consumer Discretionary</div>
+              <div class="deal-table__td">08.10.2020</div>
+              <div class="deal-table__td">$30,00</div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td">25.02.2021</div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td"><a href="#" class="btn">Подробнее</a></div>
+            </div><!--end deal-table__row -->
+            <div class="deal-table__row">
+              <div class="deal-table__td td-stars">
+                <img src="img/star1.png" alt="">
+                <img src="img/star1.png" alt="">
+                <img src="img/star1.png" alt="">
+              </div>
+              <div class="deal-table__td td-company">OZON Holding</div>
+              <div class="deal-table__td td-tick"><a href="#">OZON</a></div>
+              <div class="deal-table__td">Consumer Discretionary</div>
+              <div class="deal-table__td">08.10.2020</div>
+              <div class="deal-table__td">$30,00</div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td">25.02.2021</div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td"><a href="#" class="btn">Подробнее</a></div>
+            </div><!--end deal-table__row -->
+            <div class="deal-table__row">
+              <div class="deal-table__td td-stars">
+                <img src="img/star1.png" alt="">
+                <img src="img/star1.png" alt="">
+                <img src="img/star1.png" alt="">
+              </div>
+              <div class="deal-table__td td-company">OZON Holding</div>
+              <div class="deal-table__td td-tick"><a href="#">OZON</a></div>
+              <div class="deal-table__td">Consumer Discretionary</div>
+              <div class="deal-table__td">08.10.2020</div>
+              <div class="deal-table__td">$30,00</div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td">25.02.2021</div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td"><a href="#" class="btn">Подробнее</a></div>
+            </div><!--end deal-table__row -->
+            <div class="deal-table__row">
+              <div class="deal-table__td td-stars">
+                <img src="img/star1.png" alt="">
+                <img src="img/star1.png" alt="">
+                <img src="img/star1.png" alt="">
+              </div>
+              <div class="deal-table__td td-company">OZON Holding</div>
+              <div class="deal-table__td td-tick"><a href="#">OZON</a></div>
+              <div class="deal-table__td">Consumer Discretionary</div>
+              <div class="deal-table__td">08.10.2020</div>
+              <div class="deal-table__td">$30,00</div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td">25.02.2021</div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td"><a href="#" class="btn">Подробнее</a></div>
+            </div><!--end deal-table__row -->
+            <div class="deal-table__row">
+              <div class="deal-table__td td-stars">
+                <img src="img/star1.png" alt="">
+                <img src="img/star1.png" alt="">
+                <img src="img/star1.png" alt="">
+              </div>
+              <div class="deal-table__td td-company">OZON Holding</div>
+              <div class="deal-table__td td-tick"><a href="#">OZON</a></div>
+              <div class="deal-table__td">Consumer Discretionary</div>
+              <div class="deal-table__td">08.10.2020</div>
+              <div class="deal-table__td">$30,00</div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td">25.02.2021</div>
+              <div class="deal-table__td"><span class="green">33,67%</span></div>
+              <div class="deal-table__td"><a href="#" class="btn">Подробнее</a></div>
+            </div><!--end deal-table__row -->
+          </div><!--end deal-table -->
+        </div><!--end tab-type-table -->
+
 
       </main>
     </div><!--end content-wrapper -->

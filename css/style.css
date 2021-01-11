@@ -1424,7 +1424,9 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
 .deal-full .b-btn-center {text-align: center;margin: 10px 0 50px;}
 .deal-full .b-btn-center .btn {width: 100%; max-width: 240px;font-size: 16px;padding:7px 15px 8px;}
 
-.deal-table {display: table;width: calc(100% - 20px);margin:0 10px; font-weight: 400; text-align: center; font-size: 14px;font-family: 'Oswald', sans-serif; }
+.tab-type-table {display: none;}
+
+.deal-table {display: table;width: 100%;margin:0; font-weight: 400; text-align: center; font-size: 14px;font-family: 'Oswald', sans-serif; }
 .deal-table__row {display: table-row;}
 .deal-table__th { display: table-cell; font-family: Montserrat; font-size: 12px; background: #001458; color:#fff; vertical-align: middle;padding:9px;}
 .deal-table__td { display: table-cell;padding: 14px 9px; vertical-align:middle;background: #fff;border-bottom: 10px solid #f8f8f8}
@@ -1527,6 +1529,8 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
 .b-faq h2 {font-size: 36px; text-transform: none}
 .b-faq .news-filter li a {border: 1px solid #EFEFEF}
 .b-faq .news-filter li a:hover, .b-faq .news-filter li a.active {border: 1px solid #1357DD}
+
+
 
 @media (min-width:1251px) {
     .ipos-full__slider .slide {width: 420px !important;}
@@ -1666,6 +1670,7 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
     .ipos-right-scroll__content {display: flex; padding: 0 5px 50px;}
     .ipos-right .ip-item .block {box-shadow: none;}
     .card-steps__list .card-step:after {width:200%}
+    .ipos-filter__type {display: none;}
 }
 @media (max-width:900px) {
 .lvl2 .bs-parts .block {height: 100px;padding:0 20px;}
@@ -1867,7 +1872,7 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
     .deal-full-scroll__content {display: flex; flex-wrap: wrap;margin:0 -7px;}
     .deal-full .deal-item {padding:0 7px 15px;}
     .deal-full .deal-item {width: 50%}
-    .ipos-filter__type {display: none;}
+
     .deal-full .b-btn-center .btn {max-width: 300px;}
     .deal-full .b-btn-center {margin-bottom: 20px;}
 
