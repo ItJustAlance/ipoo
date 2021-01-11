@@ -52,11 +52,17 @@ $(function() {
     });
 
     $(".drop-select__value").on("click", function() {
+        if($(this).parent(".drop-select").is(".active")){
+
+        }else{
+        $(".drop-select").find('.drop-select__list').slideUp();
+        $(".drop-select").removeClass("active");
+        }
         $(this).parent().find('.drop-select__list').slideToggle();
         $(this).parent().toggleClass("active");
         return false;
     });
-/*
+
     $(document).on('click', function(e) {
         if (!$(e.target).closest(".drop-select").length) {
             $('.drop-select__list').slideUp();
@@ -64,7 +70,7 @@ $(function() {
         }
         e.stopPropagation();
     });
-*/
+
 
 
 // слайдер на главной

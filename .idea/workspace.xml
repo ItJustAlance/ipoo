@@ -5,6 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ipo-past-type2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ipo-past.html" beforeDir="false" afterPath="$PROJECT_DIR$/ipo-past.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +53,8 @@
       <workItem from="1609652995869" duration="24644000" />
       <workItem from="1610124137239" duration="2935000" />
       <workItem from="1610171632586" duration="7408000" />
-      <workItem from="1610263188070" duration="15977000" />
+      <workItem from="1610263188070" duration="17556000" />
+      <workItem from="1610347201709" duration="10853000" />
     </task>
     <servers />
   </component>
