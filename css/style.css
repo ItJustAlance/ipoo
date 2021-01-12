@@ -653,6 +653,20 @@ div.content {}
 .dq12-1 {top: 0; left: calc(50% - 952px);height: 300px;width: 300px;}
 .dq12-1 .t1 {top: 0;left: 0;}
 .dq12-1 .t4 {bottom: 0;left: 150px;}
+
+
+
+.dq404-1 {width: 150px;height: 150px; top:150px;left: calc(50% - 950px)}
+.dq404-2 {width: 300px;height: 450px;top:190px;left: calc(50% + 655px)}
+.dq404-2 .t3 {top: 150px;right: 0;}
+.dq404-2 .t4 {bottom: 0;left: 0;}
+.dq404-2 .t1 {right: 0;top: 0;}
+
+.dq404-3 {bottom: 0;left: calc(50% - 950px);width: 300px;height: 300px;}
+.dq404-3 .t1 {bottom: 0; left: 0;}
+.dq404-3 .t4 {top: 0;right: 0;}
+.dq404-4 {bottom: 0;left: calc(50% + 805px);width: 150px;height: 150px;}
+
 .lvl1 {margin-top: 160px;padding-bottom: 80px; position: relative;}
 .lvl1 .wrapper {display: flex; position: relative;z-index: 2;}
 .lvl1 .main-video {position: relative;}
@@ -1530,7 +1544,28 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
 .b-faq .news-filter li a {border: 1px solid #EFEFEF}
 .b-faq .news-filter li a:hover, .b-faq .news-filter li a.active {border: 1px solid #1357DD}
 
+.question-section {display: flex}
+.question-form {flex: 1 1 auto; background: #fff;padding: 30px;}
+.question-form h2 {font-size: 36px;font-weight: 400;font-family: 'Oswald', sans-serif;margin: 0;padding: 0 0 60px; text-transform: none;}
+.question-form .row-form {margin: 0 -20px; display: flex}
+.question-form .row-form label {}
+.question-form .b-pole {margin-bottom: 65px;}
+.question-form .col-50{padding: 0 20px;width: 50%;}
+.question-form .col-100 {padding: 0 20px;width: 100%;}
+.question-form .text-center {text-align: center;}
+.question-form .btn {font-size: 16px; margin-top: 15px; width: 100%; max-width: 230px;padding:10px 15px;}
 
+.b-contacts {flex: 0 0 400px;width: 400px;margin-left: 20px;background: #1357DD;color:#fff;padding: 30px;}
+.b-contacts h2 {font-size: 36px;font-weight: 400;font-family: 'Oswald', sans-serif;margin: 0;padding: 0 0 18px; text-transform: none;}
+.b-contacts h3 {padding: 5px 0 9px;margin: 0; font-size: 18px;font-weight: 400;font-family: 'Oswald', sans-serif;}
+.b-contacts p {margin: 0; padding: 0 0 10px; max-width: 330px;}
+.b-contacts .addr-map {font-size: 18px;padding-top: 20px;}
+.b-contacts .addr-map strong {font-weight: 600;}
+.b-contacts a {color:#fff}
+
+.page-404 {padding-top: 100px; text-align: center; position: relative;background: #fff; overflow: hidden; height: 100vh; min-height: 640px;}
+.page-404 .btn {padding: 8px 15px 9px;width: 100%; max-width: 230px;font-size: 16px;margin: 40px 0}
+.page-404 img { max-height: calc(80vh - 100px)}
 
 @media (min-width:1251px) {
     .ipos-full__slider .slide {width: 420px !important;}
@@ -1663,6 +1698,10 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
     #ipos-slider .ipos-full__slider--scroll {}
     .inside-footer {padding: 40px 0;margin-top: 20px;}
     .card-info {padding:15px 20px;}
+    .question-form .col-50 {width: 100%;}
+    .question-form .row-form {flex-wrap: wrap}
+    .question-form .b-pole {margin-bottom: 30px;}
+    .b-contacts {flex: 0 0 calc(50% - 20px); width: calc(50% - 20px)}
 }
 
 @media (max-width:950px) {
@@ -1716,6 +1755,7 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
 }
 @media (max-width:830px) {
 .card-steps__list .card-step:after  {width: 250%;}
+    .page-404 { min-height: 450px;padding: 10px;}
 }
 @media (max-width:767px) {
     body { line-height: 1.3; }
@@ -1889,6 +1929,12 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
     .card-grafic__chart {background: #fff;padding:20px 0}
     .mobile-hidden { display: none !important}
     .mobile-mb20 {margin-bottom: 20px !important;}
+    .question-form .b-pole {margin-bottom: 24px;}
+    .b-contacts {flex: 0 0 100%; width: 100%;margin: 20px 0 0;}
+    .question-section {flex-wrap: wrap;}
+    .question-form h2 {padding-bottom: 37px;}
+    .page-404 .btn {max-width:320px;}
+    .page-404 { min-height: 450px;padding: 10px; display: flex; align-items: center; justify-content: center; flex-direction: column}
 }
 
 @media (max-width:650px) {
@@ -1917,7 +1963,10 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
 .news-item__bottom--mobile {display: block}
 .news-item__bottom {display: none}
     .card-articles .item {width: 100%;    flex: 0 0 100%;}
-
+    .page-404 {min-height: 280px; justify-content: space-between;padding-top: 50px;}
+    .page-404 .b-btn {width: 100%}
+    .page-404 .btn {margin: 15px 0}
+    .page-404 .b-img {display: flex; flex: 1 1 auto; align-items: center;}
 }
 @media (max-width:580px) {
     .foot-top .foot-menu {display: block;}
@@ -1948,6 +1997,14 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
     .ipos-filter__btns {width: 100%;}
     .ipos-filter__btns .drop-select {margin: 0 0 5px;width: 100%;}
     .ipos-filter {margin-bottom: 5px;}
+    .question-form h2 {font-size: 22px;padding-bottom: 50px;}
+    .question-form .b-pole {margin-bottom: 35px;}
+    .question-form {padding: 20px;}
+    .b-contacts h2 {font-size: 22px;}
+    .b-contacts p {padding-bottom: 14px;}
+    .b-contacts .addr-map {font-size: 16px;}
+    .b-contacts {font-size: 14px;padding: 20px; line-height: 1.5;}
+    .question-form .btn {max-width: 400px}
 }
 
 @media (max-width:525px) {
