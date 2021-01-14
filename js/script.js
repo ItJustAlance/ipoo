@@ -171,15 +171,48 @@ $(function() {
             });
         } // end if lenght
     } // end if win_w
+    var menuTop =  $(".anchors-list").offset().top;
+    $(window).scroll(function(){
+      var sticky = $('header'),
+          scroll = $(window).scrollTop();
 
-$(window).scroll(function(){
-  var sticky = $('header'),
-      scroll = $(window).scrollTop();
+      if (scroll >= 100) sticky.addClass('fixed');
+      else sticky.removeClass('fixed');
 
-  if (scroll >= 100) sticky.addClass('fixed');
-  else sticky.removeClass('fixed');
-});
+        var $sections = $('h4');
+        $sections.each(function(i,el){
+            var top  = $(el).offset().top-80;
+            var bottom = top +$(el).height();
+            var scroll = $(window).scrollTop();
+            var id = $(el).attr('id');
+            if( scroll > top && scroll < bottom){
+                $('a.active').removeClass('active');
+                $('a[href="#'+id+'"]').addClass('active');
+            }
+        })
 
+    });
+
+    var topPos = $('.anchors-list').offset().top;
+    $(window).scroll(function() {
+        var top2 = $(document).scrollTop(),
+            pip = $('.inside-footer').offset().top,
+            height = $('.anchors-list').outerHeight() + 130;
+        if (top2 > topPos && top2 < pip - height) {$('.anchors-list').addClass('fixed').removeAttr("style");}
+        else if (top2 > pip - height) {$('.anchors-list').removeClass('fixed').css({'position':'absolute','bottom':'0'});}
+        else {$('.anchors-list').removeClass('fixed');}
+    });
+
+    $(".anchors-list").on("click","a", function (event) {
+        // исключаем стандартную реакцию браузера
+        event.preventDefault();
+        // получем идентификатор блока из атрибута href
+        var id  = $(this).attr('href'),
+            // находим высоту, на которой расположен блок
+            top = $(id).offset().top - 80;
+        // анимируем переход к блоку, время: 800 мс
+        $('body,html').animate({scrollTop: top}, 800);
+    });
 
 
 
