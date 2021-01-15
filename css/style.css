@@ -525,6 +525,8 @@ body {font-family: 'Montserrat'; font-size: 18px; line-height: 1.5;background: #
 .btn-white {background: #fff;color: #000D3B}
 .btn-white:hover {background: #1357DD;border-color:#fff; color: #fff}
 .btn-op:hover {background: #001458;border-color: #001458;color:#fff;}
+.btn-gray {background: #F8F8F8;border: 1px solid #EEF3F6;color:#000;}
+.btn-gray:hover {background: #001458;border-color: #001458;color:#fff;}
 
 /* Шапка */
 header {position: fixed;top:0;left: 0;width: 100%;z-index: 10;background: #fff;font-size: 16px;padding: 19px 0; height: 81px;}
@@ -1102,7 +1104,7 @@ h2 {font-size: 36px;font-weight: 400;padding: 0 0 48px;margin: 0;font-family: 'O
 .b-pole label {
   position: absolute;
   bottom: 2px;
-  left: 15px;
+  left: 10px;
   width: 100%;
   transition: 0.2s;
   letter-spacing: 0.05em; font-weight: 600;font-size: 18px; color: rgba(0,0,0, .5);
@@ -1285,17 +1287,37 @@ body.inside {background: #f8f8f8}
 .popup-cont {position: relative;z-index: 1;}
 .popup-title {text-align: center;font-family: 'Oswald', sans-serif; font-size: 36px;padding-bottom: 25px;}
 .popup-wrapper .desc {font-size: 18px;text-align: center;padding-bottom: 60px;}
-.popup-wrapper .form-question {}
+.popup-wrapper .text-desc {max-width: 390px;margin:0 auto;padding: 0 0 25px; font-size: 18px;}
+.popup-wrapper .form-question {max-width: 340px;margin:0 auto;}
 .popup-wrapper .form-question .b-row {margin-bottom: 30px;}
-.popup-wrapper .form-question {}
-.popup-wrapper .form-question {}
+
+#pop-info .popup-wrapper {padding:100px 80px 60px;}
 .popup-wrapper .b-btn {padding-top: 30px;text-align: center;}
 .popup-wrapper .btn {font-size: 16px;padding: 10px 50px;}
 .pop-qua1 {width: 150px;height: 150px;position: absolute;top: 0;left: 0;background: #1357DD}
 .pop-qua2 {width: 150px;height: 150px;position: absolute;bottom: 0;right: 0;background: #F8F8F8}
+.pop-qua3 {width: 150px;height: 150px;position: absolute;top: 0;left: 0;background: #F8F8F8}
+.pop-qua4 {width: 150px;height: 150px;position: absolute;top: calc(50% - 75px);right: 0;background: #EEF3F6}
+.pop-qua5 {width: 150px;height: 150px;position: absolute;bottom: 0;left: 0;background: #EEF3F6}
+.pop-qua7 {width: 150px;height: 150px;position: absolute;bottom: 0;right: 0;background: #EEF3F6}
+.pop-qua6 {width: 150px;height: 150px;position: absolute;bottom: 0;right: 0;background: #F8F8F8}
 #pop-video .popup-wrapper {padding: 0; max-width: 1200px; max-height: 775px}
 #pop-video iframe {display: block; vertical-align: top;width: 100%; height: 570px}
 #pop-video .close svg {fill:#fff;}
+
+.popup-title {text-align: center;font-family: 'Oswald', sans-serif; font-size: 36px;padding-bottom:0;}
+.popup-wrapper .popup-logo {text-align: center;margin-bottom: 40px;}
+.popup-wrapper .text-info {text-align: center;margin-bottom: 50px;}
+.popup-wrapper .btns-info {text-align: center}
+.popup-wrapper .btns-info .btn {width: 226px;padding: 7px 10px 8px; text-align: center;font-size: 16px;margin:0 10px 10px;}
+.popup-wrapper .popup-sub-title {margin-bottom: 30px;font-size: 24px;font-family: 'Oswald', sans-serif; text-align: center }
+.popup-wrapper .b-btn-ok {text-align: center}
+.popup-wrapper .b-btn-ok .btn {font-size: 16px;padding:7px 55px 8px;}
+.popup-title-mini {text-align: center;font-family: 'Oswald', sans-serif; font-size: 36px;padding-bottom:0;}
+.popup-small .popup-wrapper {max-width: 600px;padding-left: 70px;padding-right: 70px;}
+
+.list-subscribe {margin: 0 auto;padding: 0; max-width: 390px; list-style: none}
+.list-subscribe li {padding-bottom: 16px;}
 
 .content-wrapper {display: flex;margin-top: 100px;}
 .content-wrapper.mt10 {margin-top: 10px;}
@@ -1418,6 +1440,8 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
 
 .ipos-full__slider .ip-item {padding:0 10px;}
 .ipos-full__slider .slick-slider {margin: 0 -10px}
+
+
 
 .checkbox {position: relative; padding-left: 30px;padding-top: 2px; cursor: pointer}
 .checkbox input {position: absolute;top: 0;left: 0; z-index: -1; opacity: 0;}
@@ -1657,6 +1681,8 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
 .partner-4 .list-info-images .icon {display: block;margin-bottom: 17px;}
 
 .partner-3 {background: #1357DD; color:#fff;padding: 50px 0 70px; position: relative;margin-bottom: 90px; line-height: 1.5;}
+.partner-3 .mobile-btn {display: none}
+.partner-3 .calc-formula {display: none}
 .partner-3 h2 {font-size: 36px;margin: 0;padding: 0 0 48px;}
 .partner-3 .row-calc {display: flex;margin:0 -10px;}
 .partner-3 .calc-left {width: 50%;padding:0 10px;}
@@ -1765,7 +1791,7 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
     header #hamburger-icon {top:2px; left: auto;right:2px}
     header .header-right {position: relative;top: 0; padding-right: 42px;}
     header .b-notify {top: -2px; display: none;}
-    header .b-profile {top: -1px; display: none;}
+    header .b-profile {top: -1px;}
     #hamburger-icon .line {height: 2px;}
     header .b-logo .logo {height: 18px; background-size: contain;}
     header .b-logo {top:-3px}
