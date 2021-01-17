@@ -1,0 +1,3 @@
+scripts.js везде,
+jquery.jscrollpane.min, jquery.mousewheel.js main.html, news-list.html, news.html, ipo-near.html
+slick.js ipo-near.html 

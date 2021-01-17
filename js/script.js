@@ -146,6 +146,15 @@ $(function() {
             nextArrow: $('.change-next'),
             appendDots: slideControls,
             dots: true,
+            responsive: [
+                {
+                    breakpoint: 1020,
+                    settings: {
+                        adaptiveHeight: true,
+
+                    }
+                }
+            ],
             dotsClass: 'custom-dots', //slick generates this <ul.custom-dots> within the appendDots container
             customPaging: function (slider, i) {
                 //FYI just have a look at the object to find aviable information
@@ -191,10 +200,20 @@ $(function() {
                 nextArrow: $('#ipo-slide-next'),
                 // appendDots: slideControls,
                 dots: false,
+                responsive: [
+                    {
+                        breakpoint: 1020,
+                        settings: 'unslick'
+                    }
+                ]
                 // dotsClass: 'custom-dots', //slick generates this <ul.custom-dots> within the appendDots container
 
             });
         } // end if lenght
+    }else{
+        if ($("#ipos-slider .slider").length > 0) {
+           // $("#ipos-slider .slider").slick('unslick');
+        }
     } // end if win_w
 
 
@@ -333,6 +352,9 @@ $(function() {
                     arrowButtonSpeed: win_w - 20
                 });
                 var api1 = el1.data('jsp');
+            }
+            if ($("#ipos-slider .slider").length > 0) {
+            // $("#ipos-slider .slider").slick('unslick');
             }
         }else {
             if ($(".graf-scroll").length > 0) {

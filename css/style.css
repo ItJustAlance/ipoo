@@ -1305,7 +1305,7 @@ body.inside {background: #f8f8f8}
 #pop-video iframe {display: block; vertical-align: top;width: 100%; height: 570px}
 #pop-video .close svg {fill:#fff;}
 
-.popup-title {text-align: center;font-family: 'Oswald', sans-serif; font-size: 36px;padding-bottom:0;}
+.popup-title {text-align: center;font-family: 'Oswald', sans-serif; font-size: 36px;padding-bottom:40px;}
 .popup-wrapper .popup-logo {text-align: center;margin-bottom: 40px;}
 .popup-wrapper .text-info {text-align: center;margin-bottom: 50px;}
 .popup-wrapper .btns-info {text-align: center}
@@ -1481,7 +1481,9 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
 
 .deal-table {display: table;width: 100%;margin:0; font-weight: 400; text-align: center; font-size: 14px;font-family: 'Oswald', sans-serif; }
 .deal-table__row {display: table-row;}
+.deal-table__row:first-child {background: #001458;}
 .deal-table__th { display: table-cell; font-family: Montserrat; font-size: 12px; background: #001458; color:#fff; vertical-align: middle;padding:9px;}
+
 .deal-table__td { display: table-cell;padding: 14px 9px; vertical-align:middle;background: #fff;border-bottom: 10px solid #f8f8f8}
 .deal-table a {color:inherit; text-decoration: underline}
 .deal-table a:hover {text-decoration: none;}
@@ -1814,7 +1816,7 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
     .lvl7 h3 {font-size: 18px;}
     .lvl3 .bs-ipos {min-width: 1200px; max-width: 1200px}
     .foot-top .foot-menu {max-width: 636px;width: 100%;}
-    header .b-profile {top:-1px;}
+    header .b-profile {top:-2px;}
     .card-steps__list .card-step:after {width:240%}
     .b-videos .block .text {height: 116px;}
     .items-univer .item .text {height: 97px;}
@@ -1875,7 +1877,7 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
     .news-item__text { line-height: 1.6;padding-bottom: 35px;}
     .news-list .b-center {padding-bottom: 20px;}
     .news-list .b-center .btn { max-width: 300px; width: 100%;}
-
+    .countdown .countdown-time {width: 40px; height: 40px;}
     .ipos-full-scroll__content {padding-bottom: 38px; display: flex; flex-wrap: nowrap;}
     .ipos-full .ip-item {width: 290px;}
     .ip-item .block { min-width: 280px;}
@@ -1906,8 +1908,10 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
     .col-right {margin-left: 0;}
     .ipos-right-scroll { position: relative}
     .ipos-right-scroll__content {display: flex; padding: 0 5px 50px;}
-    .tablet-two_cols {display: flex;}
+    .tablet-two_cols {display: flex; position: relative;}
     .tablet-two_cols  .mini-news {width: 50%;}
+    .tablet-two_cols:after {content:"";left:50%;top: 20px;width: 1px;bottom: 70px;background: #EFEFEF; position: absolute;}
+    .slider-change-position .slick-track {display: block}
 }
 
 @media (max-width:950px) {
@@ -1934,7 +1938,11 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
 .lvl3 .ipos-scroll-cont {min-width: 900px; max-width: 900px;}
 .lvl3 .bs-ipos {margin: 0 -5px;min-width: 300px; max-width: 850px;}
 .lvl3 .bs-ipos .block {padding: 15px;font-size: 12px;}
-.lvl3 .bs-ipos .block .bottom {margin-left: -15px;margin-right: -15px;padding:5px 15px 15px;}
+.ip-item .block .p-row strong {font-size: 12px; font-weight: 500;}
+.lvl3 .bs-ipos .block .p-row strong {font-size: 12px; font-weight: 500;}
+.lvl3 .bs-ipos .block .bottom {margin-left: -15px;margin-right: -15px;padding:15px 15px 15px;}
+.ip-item .block .p-row strong img, .lvl3 .bs-ipos .block .p-row strong img {width: 13px;margin: 0 0 3px 2px}
+.deal-item .block .tit-text {font-size: 12px;     min-height: 45px;}
 
     .card-articles .item {
         flex: 0 0 50%;
@@ -1991,7 +1999,7 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
     header .b-logo .logo {height: 16px;}
     header #hamburger-icon{top:1px;right:0}
     body.active_m #hamburger-icon {right: 0;top:-2px}
-    header .header-right { line-height: 1.5;padding-right: 33px;}
+    header .header-right { line-height: 1.5;padding-right: 38px;}
     .lvl1{margin: 60px auto 0; max-width: 320px}
     .lvl1 .link-lvl1 .btn {width: 100%;}
     .content .title-h1 {font-size: 22px;padding-bottom: 10px;}
@@ -2202,11 +2210,12 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
     .partner-5__left {padding:50px 0}
     .partner-5 .text {padding-bottom: 30px; line-height: 1.5;}
     .partner-5 .b-btn .btn {max-width: 300px}
-    .slide-nav-bottom .slide-steps {width: 70px;}
-    .slide-nav-bottom .slide-progress {left:80px}
+    .slide-nav-bottom .slide-steps {width: 70px; display: none}
+    .slide-nav-bottom .slide-progress {left:0px}
     .card-info__row {padding: 10px 0}
     .tablet-two_cols {display: block}
     .tablet-two_cols  .mini-news {width: 100%;}
+    .tablet-two_cols:after {display: none}
 }
 
 @media (max-width:650px) {
