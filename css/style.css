@@ -1675,14 +1675,16 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
 .partner-5__right {padding:80px 0; background: url(../svg/partner-bg5.svg) 50% 50% no-repeat;flex:1 1 auto;}
 .partner-5 .b-btn .btn {font-size: 16px;padding:8px 15px 9px;width: 100%; max-width: 240px;}
 
-.partner-4 {background: #fff;padding-bottom: 20px;}
+.partner-4 {background: #fff;padding-bottom: 20px;padding-top: 90px;}
 .partner-4 .list-info-images {display: flex;margin:0 -10px; padding-bottom: 47px;flex-wrap: wrap;}
 .partner-4 h2 {font-family: 'Montserrat';font-size: 22px;font-weight: 600;margin: 0;padding: 0 0 18px; text-transform: none;}
 .partner-4 .list-info-images .item {width: 33.33%;padding:0 10px 20px;}
 .partner-4 .list-info-images .block {border: 1px solid #EEF3F6;padding:30px; height: 100%;}
 .partner-4 .list-info-images .icon {display: block;margin-bottom: 17px;}
+.partner-4 .list-info-images .block a {font-weight: bold; text-decoration: underline;}
+.partner-4 .list-info-images .block a:hover {text-decoration: none;}
 
-.partner-3 {background: #1357DD; color:#fff;padding: 50px 0 70px; position: relative;margin-bottom: 90px; line-height: 1.5;}
+.partner-3 {background: #1357DD; color:#fff;padding: 50px 0 70px; position: relative; line-height: 1.5;}
 .partner-3 .mobile-btn {display: none}
 .partner-3 .calc-formula {display: none}
 .partner-3 h2 {font-size: 36px;margin: 0;padding: 0 0 48px;}
@@ -1725,7 +1727,7 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
 
 
 .partner-1 {background: #fff;padding:50px 0 0;}
-.partner-1 .partner-bann { background: url(../svg/part-bann.svg) 100% 50% no-repeat;padding: 100px 0;}
+.partner-1 .partner-bann { background: url(../svg/part-bann.svg) 100% 50% no-repeat;padding: 100px 0;margin-bottom: 68px;}
 .partner-1 .title-bann {color: #000D3B;font-family: 'Oswald', sans-serif;font-weight: 300;font-size: 60px;padding-bottom: 15px; max-width: 600px;}
 .partner-1 .title-bann strong {font-weight: 700;}
 .partner-1 .subtitle-bann {font-size: 22px;font-weight: 600;padding-bottom: 27px;}
@@ -1733,7 +1735,7 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
 .partner-1 .steps-parnters {text-align: center;padding-bottom: 60px;}
 .partner-1 .steps-parnters .b-btn {margin-top: 60px;}
 .partner-1 .steps-parnters .btn {width: 100%; max-width: 240px;font-size: 16px;padding: 7px 15px;}
-.partner-1 .steps-parnters h2 {padding-bottom: 40px;}
+.partner-1 .steps-parnters h2 {padding-bottom: 47px; text-align: left;}
 
 .partner-1 .steps-list { display: flex;}
 .partner-1 .steps-list li {width: 25%; flex: 0 0 25%;position: relative; text-align: center;}
@@ -1854,7 +1856,7 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
     .pop-video-cont {height: 100%;}
     .pop-video-cont iframe {height: 100% !important;}
 
-
+    #b-slider-change .slide {padding-top: 15px;}
     #b-slider-change .slider-change-position {left: 0;top:0; position: relative;margin: 20px 0;}
     #b-slider-change .nav-slide { transform: scale(.7);margin:0 auto 150px; width: 250px;height: 250px; top:100px;}
     #b-slider-change .custom-dots {transform: scale(.7); position: absolute;top: 0;left: calc(50% - 220px);width: 450px;height: 450px;}
@@ -1910,7 +1912,7 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
     .ipos-right-scroll__content {display: flex; padding: 0 5px 50px;}
     .tablet-two_cols {display: flex; position: relative;}
     .tablet-two_cols  .mini-news {width: 50%;}
-    .tablet-two_cols:after {content:"";left:50%;top: 20px;width: 1px;bottom: 70px;background: #EFEFEF; position: absolute;}
+    .tablet-two_cols:after {content:"";left:calc(50% - 10px);top: 0;width: 20px;bottom: 0;background: #f8f8f8; position: absolute;}
     .slider-change-position .slick-track {display: block}
 }
 
@@ -1989,9 +1991,10 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
 
     .partner-4 .list-info-images .item {width: 50%;}
     .partner-4 .list-info-images .block {padding: 10px; min-height: 170px;}
-    .partner-4 .list-info-images .icon {margin-bottom: 10px;height: 40px;}
+    .partner-4 .list-info-images .icon {margin-bottom: 15px;height: 40px;}
     .partner-4 .list-info-images .icon img {height: 40px;}
     .partner-4 .list-info-images {padding-bottom: 10px;}
+    .partner-1 .partner-bann {margin-bottom: 0;}
 
 }
 @media (max-width:767px) {
@@ -2118,6 +2121,7 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
     .ipos-right {overflow: auto;margin-right: -10px;margin-left: -15px;padding-left: 5px;}
 
     main h1 {font-size: 28px; text-transform: none; line-height: 1.4;padding-bottom: 25px;}
+    .info-content h1 {font-size: 22px;}
     .news-full {padding: 20px 19px 28px;}
     .news-full__text { line-height: 1.5;}
     .comment-item {padding: 20px 0;}
@@ -2183,7 +2187,7 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
     .gloss-content p {padding-bottom: 18px;}
     .blog-links li {margin-right: 20px}
     .title-h1 {font-size: 22px; padding-bottom: 20px;}
-    .info-content {padding: 20px;}
+    .info-content {padding: 20px; line-height: 1.5;}
     .info-content h2 {font-size: 22px;}
     .info-content p {padding-bottom: 20px;}
     .partner-1 .steps-list {}
@@ -2206,10 +2210,13 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
     .partner-3 .left-btn { display: none}
     .partner-3  .mobile-btn {display: block;text-align: center;width: 100%;padding-top: 28px;}
     .partner-3  .mobile-btn .btn {max-width: 300px;width: 100%;}
+    .partner-4 {padding-top: 50px;}
+    .partner-4 h2 {font-size: 18px;}
     .partner-5 h2 {font-size: 28px;}
     .partner-5__left {padding:50px 0}
     .partner-5 .text {padding-bottom: 30px; line-height: 1.5;}
-    .partner-5 .b-btn .btn {max-width: 300px}
+    .partner-5 .b-btn {text-align: center;}
+    .partner-5 .b-btn .btn {max-width: 480px}
     .slide-nav-bottom .slide-steps {width: 70px; display: none}
     .slide-nav-bottom .slide-progress {left:0px}
     .card-info__row {padding: 10px 0}
