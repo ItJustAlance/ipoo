@@ -513,10 +513,10 @@ $(function() {
     var timerID;
     document.body.onresize = function() {
         width = $('.card-grafic__chart').width();
-        height = $('.card-grafic__chart').height();
+        height = $('.card-chart__info').height();
         if (timerID) clearTimeout(timerID);
         timerID = setTimeout(function() {
-            chart.resize(width, height);
+            chart.resize(width, height + 30);
         }, 200);
     }
     var series = chart.addAreaSeries({
