@@ -510,7 +510,15 @@ $(function() {
             }
         },
     });
-
+    var timerID;
+    document.body.onresize = function() {
+        width = $('.card-grafic__chart').width();
+        height = $('.card-grafic__chart').height();
+        if (timerID) clearTimeout(timerID);
+        timerID = setTimeout(function() {
+            chart.resize(width, height);
+        }, 200);
+    }
     var series = chart.addAreaSeries({
         topColor: 'rgba(0, 120, 255, 0.2)',
         bottomColor: 'rgba(0, 120, 255, 0.0)',
