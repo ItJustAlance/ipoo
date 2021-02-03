@@ -347,6 +347,10 @@ $(function() {
 
     }, 200);
 
+    if($(".select").length>0) {
+        $('.select').ikSelect();
+    }
+
 
 	$(window).resize(function(){
     win_w = $(document).width();
@@ -381,6 +385,31 @@ $(function() {
             if ($(".steps-list__scroll").length > 0) {
                 $('.steps-list__scroll').jScrollPane().data().jsp.destroy();
             }
+            if ($("#ipos-slider .slider").length > 0) {
+                var $slider = $('#ipos-slider .slider');
+                var $progressBar = $('#ipos-slider .slide-progress .progress');
+                var $progressBarLabel = $('#ipos-slider .slide-steps');
+                var slideControls = $(this).find('#ipos-slider');
+                $slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+                    var calc = ((nextSlide) / (slick.slideCount - 3)) * 100;
+                    var num = nextSlide + 1;
+                    numP = num.toString().padStart(2, 0);
+                    var numAll = nextSlide + 1;
+                    numA = (slick.slideCount - 2).toString().padStart(2, 0);
+                    console.log(nextSlide);
+
+                    $('#ipos-slider .step').text(numP);
+                    $('#ipos-slider .steps').text(numA);
+                    $progressBar
+                        .css('width', calc + '%')
+                    // .attr('aria-valuenow', calc );
+
+                    // $progressBarLabel.text( calc + '% completed' );
+
+                });
+
+                $slider.slick('reinit');
+            } // end if lenght
 
         }
         if (win_w < 950){

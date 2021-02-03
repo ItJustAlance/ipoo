@@ -447,7 +447,8 @@ input, textarea, select, button {
 	font-size: 12px;
 	color: #fff;
 	font-weight:300;
-	margin-top: -1px;
+	margin-top: 1px;
+    width: 100% !important;
 	top:100% !important; left:0 !important;
 }
 .ik_select_dropdown ul {
@@ -462,7 +463,7 @@ input, textarea, select, button {
 	color:#343434;
 }
 .ik_select_dropdown ul li { display:block;padding:5px 15px;}
-.ik_select_dropdown ul li:hover {background:#f7f7f7;}
+.ik_select_dropdown ul li:hover {background:#fff;}
 .ik_select_dropdown ul li span {display:block;}
 .ik_select {
     background-image: none;
@@ -473,22 +474,25 @@ input, textarea, select, button {
     font-weight:300;
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
     vertical-align: top;
-    width: 100%;
+    width: 100% !important;
 	}
 /* .ik_select.sel_open .ik_select_link {background:url(../img/arr-down.png) 100% 50% no-repeat; } */
 
-.ik_select_link_text { padding-right:15px;color:#fff;
-font-size: 14px;background:url(../img/arr-select.png)  100% 50% no-repeat; text-overflow: ellipsis; overflow: hidden;    white-space: nowrap; }
+.ik_select_link_text { padding-right:15px;color:rgba(0,0,0, .5);
+font-size: 14px;background:url(../svg/arr-select2.svg)  100% 50% no-repeat; text-overflow: ellipsis; overflow: hidden;    white-space: nowrap; }
 .ik_select select { z-index:4; width:100%;}
 .ik_select_link {
 	overflow: hidden;
 	padding: 12px 15px 10px;
 	white-space:nowrap;
 	position: relative;
-	background-color: #182034;
+	background-color: #fff;
+    color:rgba(0,0,0, .5);
+    font-size: 16px;
+    font-weight: 600;
 	z-index:99;
 	border-radius:0;
-
+    border-bottom: 1px solid #1357DD;
 }
 .ik_select.open_sel .ik_select_link {
 	}
@@ -771,7 +775,7 @@ h2 {font-size: 36px;font-weight: 400;padding: 0 0 48px;margin: 0;font-family: 'O
 .lvl4 .dohod-scroll {display: flex;width: 100%;}
 .lvl4 .dohod-scroll-cont {width: 100%; display: flex;}
 
-.deal-item .block{background: #F8F8F8;padding: 30px 30px 20px;font-size: 14px;border:1px solid #F8F8F8;transition: all 0.3s ease;}
+.deal-item .block{background: #F8F8F8;padding: 30px 30px 20px;font-size: 14px;border:1px solid #F8F8F8;transition: all 0.3s ease; min-height: 100%;}
 .deal-item .block:hover {box-shadow: 0px 4px 24px rgba(0, 13, 59, 0.1); background: #fff;border: 1px solid #EEF3F6}
 .deal-item {width: 33.3%;padding: 0 10px;}
 .deal-item .block .img { display: flex; align-items: center;margin-bottom: 22px;}
@@ -784,6 +788,20 @@ h2 {font-size: 36px;font-weight: 400;padding: 0 0 48px;margin: 0;font-family: 'O
 .deal-item .block .b-row.sel .col2 {color: #14C7FF; font-size: 24px;}
 .deal-item .block .col1 {flex: 1 1 auto; max-width: calc(100% - 110px);}
 .deal-item .block .col2 {min-width: 70px; text-align: right;font-family: 'Oswald', sans-serif; font-size: 18px;font-weight: 400;}
+.deal-item__bottom {width: 100%;}
+.deal-item__bottom .news-item__date {padding-left: 0;border:none; display: inline-block; vertical-align: top;}
+.deal-item__bottom .news-item__tag {
+    color: #1357DD;
+    margin-top: 0;
+    line-height: 1.3;
+    margin-bottom: 8px;
+    text-decoration: underline;
+    white-space: nowrap;
+    display: inline-block;
+    margin-right: 6px;
+    vertical-align: top;
+    font-size: 12px;
+}
 .lvl4 .b-etc {text-align: center;}
 .lvl4 .b-etc .btn {min-width: 240px;}
 
@@ -951,7 +969,8 @@ h2 {font-size: 36px;font-weight: 400;padding: 0 0 48px;margin: 0;font-family: 'O
 .slide-nav-bottom .slide-steps .steps {}
 .slide-nav-bottom .slide-progress {position: absolute; background: rgba(0,0,0, .3);height: 2px;top: 19px;left: 110px;right: 100px;}
 .slide-nav-bottom .slide-progress .progress {background: #1357DD; position: absolute;top: 0;left: 0;height: 100%;}
-.slide-nav-bottom .slide-arrs { position: absolute;top: 0;right: 0; }
+.slide-nav-bottom .slide-arrs { position: absolute;top: 0;right: 0; user-select: none; }
+.slide-nav-bottom .slide-arrs * {user-select: none;}
 .slide-nav-bottom .slide-arrs .change-prev {width: 38px;height: 38px;  border: 1px solid #1357DD;border-radius: 5px; background: #fff url(../svg/arrow-l.svg) 12px 50% no-repeat; background-size: 8px auto; display: inline-block;vertical-align: top; cursor: pointer;}
 .slide-nav-bottom .slide-arrs .change-next {width: 38px;height: 38px;  border: 1px solid #1357DD;border-radius: 5px; background: #fff url(../svg/arrow-r.svg) 13px 50% no-repeat; background-size: 8px auto;margin-left: 5px;display: inline-block;vertical-align: top; cursor: pointer;}
 .slide-nav-bottom .slide-arrs .slick-disabled {border: 1px solid #000000 !important; background-color: #fff !important; opacity: .3;}
@@ -1100,7 +1119,7 @@ h2 {font-size: 36px;font-weight: 400;padding: 0 0 48px;margin: 0;font-family: 'O
   bottom: 100%;
   font-size: 10px
 }
-
+.select-label {font-size: 10px;color:rgba(0,0,0, .5);font-weight: 600; display: block;width: 100%;}
 .b-pole label {
   position: absolute;
   bottom: 2px;
@@ -1380,7 +1399,8 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
 
 .news-full__text {padding-bottom: 20px;}
 .news-full__text p {margin: 0;padding: 0 0 30px;}
-
+.news-full__text a {text-decoration: underline}
+.news-full__text a:hover {text-decoration: none}
 .news-full__bottom {display: flex; align-items: center;font-size: 14px; justify-content: space-between;width: 100%;}
 .news-full__bottom .rating {font-size: 14px;}
 .news-full__bottom .rating img {vertical-align: top;margin-left: 3px;}
@@ -1592,10 +1612,11 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
 .question-form h2 {font-size: 36px;font-weight: 400;font-family: 'Oswald', sans-serif;margin: 0;padding: 0 0 60px; text-transform: none;}
 .question-form .row-form {margin: 0 -20px; display: flex}
 .question-form .row-form label {}
-.question-form .b-pole {margin-bottom: 65px;}
+.question-form .b-pole {margin-bottom: 35px;}
 .question-form .col-50{padding: 0 20px;width: 50%;}
 .question-form .col-100 {padding: 0 20px;width: 100%;}
 .question-form .text-center {text-align: center;}
+.question-form .row-select {margin-bottom: 35px;}
 .question-form .btn {font-size: 16px; margin-top: 15px; width: 100%; max-width: 230px;padding:10px 15px;}
 
 .b-contacts {flex: 0 0 400px;width: 400px;margin-left: 20px;background: #1357DD;color:#fff;padding: 30px;font-size: 16px;}

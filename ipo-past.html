@@ -14,6 +14,8 @@
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+
+  <link href="css/jquery-ui.min.css" rel="stylesheet">
   <link href="css/style.css?v=3" rel="stylesheet">
 </head>
 
@@ -122,15 +124,9 @@
               </div>
             </div><!--end drop-select -->
             <div class="drop-select">
-              <div class="drop-select__value">Дата</div>
+              <div class="drop-select__value"><input id="" type="hidden"><span id="open-datepicker">Дата</span></div>
               <span class="arr"><img src="svg/arr-select2.svg" alt=""></span>
-              <div class="drop-select__list">
-                <ul>
-                  <li><label class="checkbox" for="dd1"><input id="dd1" type="checkbox"><span>Technology</span></label></li>
-                  <li><label class="checkbox" for="dd2"><input id="dd2" type="checkbox"><span>Financials</span></li>
-                  <li><label class="checkbox" for="dd3"><input id="dd3" type="checkbox"><span>Consumer Discretionary</span></li>
-                </ul>
-              </div>
+              <div class="drop-select__list"><div id="datepicker"></div></div>
             </div><!--end drop-select -->
             <div class="drop-select">
               <div class="drop-select__value">Рейтинг</div>
@@ -746,10 +742,17 @@
 </div><!--end over -->
 
 <script src="js/jquery.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 <script src="js/jquery.jscrollpane.min.js"></script>
 <script src="js/slick.js"></script>
 <script src="js/jquery.mousewheel.js"></script>
 <!-- script src="js/mwheelIntent.js"></script -->
+<script>
+    $( function() {
+        $( "#datepicker" ).datepicker();
+    } );
+</script>
 <script src="js/script.js"></script>
 </body>
 </html>
