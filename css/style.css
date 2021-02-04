@@ -447,7 +447,7 @@ input, textarea, select, button {
 	font-size: 12px;
 	color: #fff;
 	font-weight:300;
-	margin-top: 1px;
+	margin-top:  и1px;
     width: 100% !important;
 	top:100% !important; left:0 !important;
 }
@@ -1561,6 +1561,8 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
 .b-btn__bottom {display: none;}
 .card-grafic__info__title .b-btn {padding-bottom: 18px;padding-top: 10px;}
 .card-grafic__info .btn {font-size: 16px;padding:7px 50px;}
+
+.card-grafic__chart__col .card-grafic__info {margin-bottom: 0;}
 
 .card-top {margin:0 -10px; display: flex;}
 .card-top .b-col {padding:0 10px 20px;}
