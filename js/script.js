@@ -109,8 +109,10 @@ $(function() {
         }
         e.stopPropagation();
     });
-
-
+// календарь
+if($("#datepicker").length>0) {
+         $( "#datepicker" ).datepicker();
+    }
 
 // слайдер на главной
     if($("#b-slider-change .slides").length>0) {
