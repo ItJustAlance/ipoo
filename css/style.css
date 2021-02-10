@@ -1353,11 +1353,12 @@ body.inside {background: #f8f8f8}
 .news-filter{font-family: 'Oswald', sans-serif; margin: 0 0 7px;padding: 0; list-style: none;}
 .news-filter li {margin:0 9px 10px 0; display: inline-block; vertical-align: top;}
 .news-filter li a {display: block;border: 1px solid #fff;padding: 5px 15px;background: #fff;}
-.news-filter li a.active, .news-filter li a:hover {border: 1px solid #1357DD;}
+.news-filter li a.active, .news-filter li a:hover, .news-filter li.current-menu-item {border: 1px solid #1357DD;}
+
 
 .news-list {}
-.news-list .b-center {text-align: center;padding:10px 0;}
-.news-list .b-center .btn {min-width:240px;font-size: 16px;}
+.b-center {text-align: center;padding:10px 0;}
+ .b-center .btn {min-width:240px;font-size: 16px;}
 .news-item {background: #fff;padding:30px;color:#000;margin-bottom: 20px;border: 1px solid #fff;}
 .news-item a {text-decoration: none; color:inherit}
 .news-item:hover {border: 1px solid #1357DD;box-shadow: 0 4px 24px rgba(0, 13, 59, 0.1);}
@@ -1601,8 +1602,11 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
 
 .blog-links {font-size: 18px;margin: 0;padding: 0 0 10px; list-style: none; font-size: 18px;font-weight: 400;font-family: 'Oswald', sans-serif;}
 .blog-links li {display: inline-block; vertical-align: top;margin-right: 40px;margin-bottom: 20px;}
-.blog-links li  a{}
+.blog-links li  a:hover,
+.blog-links li.current-menu-item a, 
 .blog-links li.active a{color:#1357DD}
+
+
 
 .b-faq {background: #fff;padding: 30px 30px 20px;}
 .b-faq h2 {font-size: 36px; text-transform: none}
@@ -1637,8 +1641,10 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
 .list-abc {padding: 0 0 10px;margin: 0; list-style: none;font-weight: 400;font-family: 'Oswald', sans-serif;}
 .list-abc li {display: inline-flex; align-items: center; justify-content: center; font-size: 18px; vertical-align: top; margin:0 8px 10px 0;border: 1px solid #EFEFEF}
 .list-abc li a {color:#000;text-decoration: none;width: 36px;height: 36px; display: block; line-height: 35px; text-align: center;}
-.list-abc li:hover, .list-abc li.active {background: #1357DD;border-color:#1357DD;}
+.list-abc li:hover, .list-abc li.active, .list-abc li.current-menu-item {background: #1357DD;border-color:#1357DD;}
 .list-abc li:hover a, .list-abc li.active a {color:#fff}
+
+.lvl12 .mc4wp-alert { font-size: 14px;margin: 15px 0;}
 
 .gloss-content {padding-top: 10px;}
 .gloss-content .letter {position: absolute;top:-10px;left:0;font-weight: 400;font-family: 'Oswald', sans-serif;font-size: 48px;}
