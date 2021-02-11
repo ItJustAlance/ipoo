@@ -123,10 +123,12 @@
                 </ul>
               </div>
             </div><!--end drop-select -->
-            <div class="drop-select">
-              <div class="drop-select__value"><input id="" type="hidden"><span id="open-datepicker">Дата</span></div>
+            <div class="drop-select-date">
+              <div class="drop-select-date__value"><span class="datepick" id="open-datepicker">Дата</span></div>
               <span class="arr"><img src="svg/arr-select2.svg" alt=""></span>
-              <div class="drop-select__list"><div id="datepicker"></div></div>
+              <div class="drop-select-date__list"><div id="datepicker"></div>
+<input type="hidden" id="datepicker_value" value="01.08.2019">
+</div>
             </div><!--end drop-select -->
             <div class="drop-select">
               <div class="drop-select__value">Рейтинг</div>
@@ -748,11 +750,7 @@
 <script src="js/slick.js"></script>
 <script src="js/jquery.mousewheel.js"></script>
 <!-- script src="js/mwheelIntent.js"></script -->
-<script>
-    $( function() {
-        $( "#datepicker" ).datepicker();
-    } );
-</script>
+
 <script src="js/script.js"></script>
 </body>
 </html>

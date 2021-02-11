@@ -1399,6 +1399,9 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
 .news-full .news-item__tags  a {color:#000}
 
 .news-full__text {padding-bottom: 20px;}
+.news-full__text ul { list-style:circle}
+.news-full__text ol { list-style: decimal}
+.news-full__text ul li, .news-full__text ol li { display:block;margin: 0;padding:0 0 3px}
 .news-full__text p {margin: 0;padding: 0 0 30px;}
 .news-full__text a {text-decoration: underline}
 .news-full__text a:hover {text-decoration: none}
@@ -1473,7 +1476,15 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
 .drop-select.active, .drop-select.change, .drop-select:hover {border: 1px solid #1357DD;}
 .drop-select .arr {display: block;width: 14px;height: 7px; position: absolute;top:15px;right:15px; transition: all 0.3s ease;}
 .drop-select.active .arr {transform: rotate(180deg)}
-.drop-select__value {font-size: 18px;font-family: 'Oswald', sans-serif; cursor: pointer;padding: 5px 45px 5px 15px;}
+.drop-select__value {font-size: 18px;font-family: 'Oswald', sans-serif; cursor: pointer;padding: 5px 45px 5px 15px; position:relative;z-index: 2;}
+
+
+.drop-select-date {display: inline-block; vertical-align:top; border: 1px solid #fff;background: #fff; position: relative; transition: all 0.3s ease;}
+.drop-select-date.active, .drop-select-date.change, .drop-select-date:hover {border: 1px solid #1357DD;}
+.drop-select-date .arr {display: block;width: 14px;height: 7px; position: absolute;top:15px;right:15px; transition: all 0.3s ease;}
+.drop-select-date.active .arr {transform: rotate(180deg)}
+.drop-select-date__value {font-size: 18px;font-family: 'Oswald', sans-serif; cursor: pointer;padding: 5px 45px 5px 15px;}
+.drop-select-date__list {display:none;letter-spacing: 0.05em;color: #000D3B; font-size: 14px; width: 100%; min-width: 237px; border-radius:3px; position: absolute;top:100%; left: 0;margin-top: 5px;box-shadow: 0px 4px 24px rgba(0, 13, 59, 0.1); z-index: 3; background: #fff;}
 .drop-select__list {display:none;letter-spacing: 0.05em;color: #000D3B; font-size: 14px; width: 100%; min-width: 260px; position: absolute;top:100%; left: 0;margin-top: 5px;box-shadow: 0px 4px 24px rgba(0, 13, 59, 0.1); z-index: 3; background: #fff;}
 .drop-select__list ul {margin: 0;padding: 0; list-style: none}
 .drop-select__list ul li {padding:15px 20px 15px;}

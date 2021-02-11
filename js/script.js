@@ -101,6 +101,16 @@ $(function() {
         $(this).parent().toggleClass("active");
         return false;
     });
+    $(".drop-select-date__value").on("click", function() {
+        if($(this).parent(".drop-select-date").is(".active")){
+        }else{
+            $(".drop-select-date").find('.drop-select-date__list').slideUp();
+            $(".drop-select-date").removeClass("active");
+        }
+        $(this).parent().find('.drop-select-date__list').slideToggle();
+        $(this).parent().toggleClass("active");
+        return false;
+    });
 
     $(document).on('click', function(e) {
         if (!$(e.target).closest(".drop-select").length) {
@@ -110,8 +120,17 @@ $(function() {
         e.stopPropagation();
     });
 // календарь
-if($("#datepicker").length>0) {
-         $( "#datepicker" ).datepicker();
+	if($("#datepicker").length>0) {
+
+	$("#datepicker").datepicker({
+		onSelect: function(date){
+			$('#datepicker_value').val(date)
+			$('#open-datepicker').text(date)
+		}
+	});
+	$("#datepicker").datepicker("setDate", $('#datepicker_value').val());
+	
+	
     }
 
 // слайдер на главной
