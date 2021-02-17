@@ -696,9 +696,10 @@ div.content {}
 .lvl1 h1 strong {font-weight: 600; display: block}
 .lvl1 .desc{font-size: 22px;font-weight: 600; max-width: 610px;margin-bottom: 40px;}
 .lvl1 .bs-icons{width: 490px; margin-left: -6px; margin-bottom: 25px;}
-.lvl1 .block {border: 1px solid rgba(19,87,221, .5);transition: all 0.3s ease;margin: 10px 0 0 6px;width: 220px; height: 80px;font-size: 14px; display: inline-flex; align-items: center;padding:10px 10px 10px 20px;background: rgba(238, 243, 246, .5); position: relative;top: 0;left: 0; vertical-align: top;}
+.lvl1 .block {margin: 10px 0 0 6px;width: 220px; height: 80px; display: inline-block;}
+.lvl1 .block .item {border: 1px solid rgba(19,87,221, .5);transition: all 0.3s ease;width: 220px; height: 80px;font-size: 14px; display: flex; align-items: center;padding:10px 10px 10px 20px;background: rgba(238, 243, 246, .5); position: relative;top: 0;left: 0; vertical-align: top;}
 .lvl1 .block .ico {transition: all 0.3s ease;}
-.lvl1 .block:hover {background: #1357DD;border:1px solid #1357DD;top:-8px;left: -15px;color:#fff}
+.lvl1 .block:hover .item {background: #1357DD;border:1px solid #1357DD;color:#fff; transform: translate( -8px, -15px);}
 .lvl1 .ic1 .ico {background: url(../svg/iico1.svg) 0 0 no-repeat;width: 24px;height: 34px;}
 .lvl1 .ic2 .ico {background: url(../svg/iico2.svg) 0 0 no-repeat;width: 38px;height: 38px;}
 .lvl1 .ic3 .ico {background: url(../svg/iico3.svg) 0 0 no-repeat;width: 29px;height: 36px;}
@@ -1039,6 +1040,7 @@ h2 {font-size: 36px;font-weight: 400;padding: 0 0 48px;margin: 0;font-family: 'O
 .lvl10 {padding-top: 80px;}
 .lvl10 h2 {padding-bottom: 30px;}
 .lvl10 .bs-toggle {margin-bottom: 30px;}
+.content a {color:#1357DD;}
 .b-toggle {}
 .toggle-title {font-size: 22px;cursor:pointer;padding:12px 0;font-weight: 600;padding-right: 50px;position: relative;transition: all 0.3s ease;}
 .toggle-title span {width: 16px;height: 16px; position: absolute;top:20px;right: 0; display: block;transition: all 0.3s ease;}
@@ -1132,6 +1134,7 @@ h2 {font-size: 36px;font-weight: 400;padding: 0 0 48px;margin: 0;font-family: 'O
   bottom: 100%;
   font-size: 10px
 }
+.b-pole label.label-top {bottom: 100%;   font-size: 10px}
 .lvl12 .b-btn {width: 40%; max-width: 230px;margin-left: 20px;}
 .lvl12 .b-btn .btn {width: 100%;height: 42px;font-size: 16px;}
 
@@ -1396,7 +1399,7 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
 .news-full__info {display: flex; align-items: center;flex-wrap: wrap;margin-bottom: 30px;}
 .news-full__info .ava {overflow: hidden;border-radius: 50%;width: 40px;height: 40px;margin-right: 10px;}
 
-.news-full .news-item__tags  a {color:#000}
+
 
 .news-full__text {padding-bottom: 20px;}
 .news-full__text ul { list-style:circle}
@@ -1630,6 +1633,7 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
 .question-form .row-form {margin: 0 -20px; display: flex}
 .question-form .row-form label {}
 .question-form .b-pole {margin-bottom: 35px;}
+.wpcf7-not-valid-tip {font-size: 10px;margin-top: 10px; display: block;color:#dc3232;}
 .question-form .col-50{padding: 0 20px;width: 50%;}
 .question-form .col-100 {padding: 0 20px;width: 100%;}
 .question-form .text-center {text-align: center;}
@@ -2058,7 +2062,8 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
 
     .lvl1 .block .tit {font-size: 12px;padding-bottom: 2px;}
     .lvl1 .block .right {font-size: 14px;margin: 5px 0 0;padding: 0;}
-    .lvl1 .block { display: inline-block;margin:10px 0 0 8px; height: 90px; vertical-align: top;padding:8px 10px;width: 145px; }
+    .lvl1 .block { display: inline-block;margin:10px 0 0 8px; height: 90px; vertical-align: top;width: 145px; }
+    .lvl1 .block .item {width: 100%;height: 90px;padding:7px 8px; display: block;}
     .lvl1 .main-left {max-width: 300px; display: inline-block; vertical-align: top;}
     .lvl1 .main-video {display: inline-block; vertical-align: top; width:100%;}
     .lvl1 .bs-icons {width: 110%;margin-left: -8px;}
