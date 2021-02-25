@@ -1040,7 +1040,11 @@ h2 {font-size: 36px;font-weight: 400;padding: 0 0 48px;margin: 0;font-family: 'O
 .lvl10 {padding-top: 80px;}
 .lvl10 h2 {padding-bottom: 30px;}
 .lvl10 .bs-toggle {margin-bottom: 30px;}
-.content a {color:#1357DD;}
+.news-full__text a,
+.info-content a,
+.gloss-content a,
+.article-ipo .b-text a
+{color:#1357DD;}
 .b-toggle {}
 .toggle-title {font-size: 22px;cursor:pointer;padding:12px 0;font-weight: 600;padding-right: 50px;position: relative;transition: all 0.3s ease;}
 .toggle-title span {width: 16px;height: 16px; position: absolute;top:20px;right: 0; display: block;transition: all 0.3s ease;}
@@ -1617,7 +1621,7 @@ main h1 {font-size: 36px;margin: 0;padding: 0 0 10px; text-transform: uppercase;
 .blog-links {font-size: 18px;margin: 0;padding: 0 0 10px; list-style: none; font-size: 18px;font-weight: 400;font-family: 'Oswald', sans-serif;}
 .blog-links li {display: inline-block; vertical-align: top;margin-right: 40px;margin-bottom: 20px;}
 .blog-links li  a:hover,
-.blog-links li.current-menu-item a, 
+.blog-links li.current-menu-item a,
 .blog-links li.active a{color:#1357DD}
 
 
