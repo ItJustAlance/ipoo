@@ -1087,7 +1087,10 @@ h2 {font-size: 36px;font-weight: 400;padding: 0 0 48px;margin: 0;font-family: 'O
 .lvl11 .block:hover .b-item .ic5 span { background: url(../svg/mat5_.svg) 50% 50% no-repeat;}
 .lvl11 .block:hover .b-item .ic6 span { background: url(../svg/mat6_.svg) 50% 50% no-repeat;}
 
-
+.editable-text ol {list-style: decimal; margin: 0 0 15px 20px}
+.editable-text ul {list-style: disc;margin: 0 0 15px 20px}
+.editable-text ol li,
+.editable-text ul li {padding-bottom: 10px;}
 .lvl12 {background: #EEF3F6; position: relative;padding:124px 0; min-height: 300px;}
 
 .lvl12 .wrapper {}
