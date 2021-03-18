@@ -516,7 +516,11 @@ $(function() {
 	}, 200);
 
 	});
-    if($(".countdown").length>0) {
+
+    
+});
+
+if($(".countdown").length>0) {
 
         function getTimeRemaining(endtime) {
             var t = Date.parse(endtime) - Date.parse(new Date());
@@ -558,12 +562,10 @@ $(function() {
         }
 
         var deadline = "December 30 2020 00:00:00 GMT+0300";
+        
         // var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000); // for endless timer
-        initializeClock('countdown1', deadline);
-        initializeClock('countdown2', deadline);
-        initializeClock('countdown3', deadline);
+        // initializeClock('countdown1', deadline);
+        // initializeClock('countdown2', deadline);
+        // initializeClock('countdown3', deadline);
     }
-});
-
-
 
