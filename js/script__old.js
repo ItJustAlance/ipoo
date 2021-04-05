@@ -41,10 +41,6 @@ $(function() {
         $("body").addClass("pop-show");
         return false;
     });
-    $(".popup .btn").on("click", function() {
-		$(".popup").fadeOut();
-		$("body").removeClass("pop-show");
-	});
     $(".js-pop-thanks").on("click", function() {
         $("#pop-thanks").fadeIn();
         $("body").addClass("pop-show");
@@ -70,20 +66,16 @@ $(function() {
     $("#js-tab-type-block").on("click", function() {
         $(this).addClass('active');
         $("#js-tab-type-table").removeClass('active');
-        $('.tab-type-table').addClass("type-blocks");
-		return false
+        $('.tab-type-blocks').show(0);
+        $('.tab-type-table').hide(0);
     });
     $("#js-tab-type-table").on("click", function() {
         $(this).addClass('active');
         $("#js-tab-type-block").removeClass('active');
-        $('.tab-type-table').removeClass("type-blocks");
-		return false
+        $('.tab-type-blocks').hide(0);
+        $('.tab-type-table').show(0);
     });
-	if (win_w < 950) {
-            $("#js-tab-type-block").addClass('active');
-            $("#js-tab-type-table").removeClass('active');
-            $('.tab-type-table').addClass("type-blocks");
-        }
+
 
   $(document).on('click', function(e) {
   if (!$(e.target).closest(".popup-wrapper").length) {
@@ -518,17 +510,20 @@ $(function() {
         if (win_w < 950) {
             $("#js-tab-type-block").addClass('active');
             $("#js-tab-type-table").removeClass('active');
-            $('.tab-type-table').addClass("type-blocks");
+            $('.tab-type-blocks').show(0);
+            $('.tab-type-table').hide(0);
         }
 	}, 200);
 
 	});
-    if($(".countdown").length>0) {
+
+    
+});
+
+if($(".countdown").length>0) {
 
         function getTimeRemaining(endtime) {
-            var delta_time = 28*60*60 *1000; //  28 часов которые нужно вычесть
             var t = Date.parse(endtime) - Date.parse(new Date());
-            t -= delta_time;
             var seconds = Math.floor((t / 1000) % 60);
             var minutes = Math.floor((t / 1000 / 60) % 60);
             var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
@@ -551,53 +546,26 @@ $(function() {
 
             function updateClock() {
                 var t = getTimeRemaining(endtime);
-                if (t.total <= 0) {
-                    clearInterval(timeinterval);
-                    daysSpan.innerHTML = '00';
-                    hoursSpan.innerHTML = '00';
-                    minutesSpan.innerHTML = '00';
-                    secondsSpan.innerHTML = '00';
 
-                    return false;
-                    // $(clock).closest('.ip-item').remove();
-                }
                 daysSpan.innerHTML = t.days;
                 hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
                 minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
                 secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 
-
-                return true;
+                if (t.total <= 0) {
+                    clearInterval(timeinterval);
+                }
             }
 
-            let uc = updateClock();
-            if(!uc){
-                $(clock)
-                    .closest('.ip-item')
-                    .find('.btn.btn-add')
-                    .attr('onclick', "return false")
-                    .text('Прием заявок окончен');
-                console.log('вырубаем');
-            }
+            updateClock();
             var timeinterval = setInterval(updateClock, 1000);
         }
 
-        // var deadline = "December 30 2020 00:00:00 GMT+0300";
-        // 2021-03-21T00:00:00Z
+        var deadline = "December 30 2020 00:00:00 GMT+0300";
+        
         // var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000); // for endless timer
-            // var deadline = "2021-03-18T18:18:00Z";
-        //initializeClock('countdown-1', deadline);
-        //initializeClock('countdown-2', deadline);
-       // initializeClock('countdown-3', deadline);
-
-        if(typeof timer_data != 'undefined'){
-            Object.entries(timer_data).forEach(([tiker, endtime]) => {
-                console.log(tiker , endtime); // key ,value
-                initializeClock('countdown-' + tiker, endtime);
-            });
-        }
-
-
+        // initializeClock('countdown1', deadline);
+        // initializeClock('countdown2', deadline);
+        // initializeClock('countdown3', deadline);
     }
-});
 
