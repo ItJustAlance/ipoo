@@ -474,16 +474,21 @@ $(function() {
     var chart = LightweightCharts.createChart(container, {
         width: width,
         height: height,
-        leftPriceScale: {
+        /*leftPriceScale: {
             scaleMargins: {
                 top: 0.2,
                 bottom: 0.2,
             },
             visible: true,
             borderVisible: false,
-        },
+        }, */
         rightPriceScale: {
-            visible: false,
+            scaleMargins: {
+                top: 0.2,
+                bottom: 0,
+            },
+            visible: true,
+            borderVisible: false,
         },
         timeScale: {
             borderVisible: false,
